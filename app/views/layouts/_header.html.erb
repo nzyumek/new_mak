@@ -1,0 +1,71 @@
+<header class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #ED743E;">
+        <%= link_to image_tag("logo.png", size: '40x40'), root_path %>
+        <button
+            class = "navbar-toggler"
+            type = "button"
+            data-toggle = "collapse"
+            data-target = "#navbarSupportedContent"
+            aria-controls = "navbarSupportedContent"
+            aria-expanded = "flase"
+            aria-label = "Toggle navigation"
+            >
+        <span class= "navbar-toggler-icon"></span>
+    </button>
+<!-- header がtop-fixed-->    
+        <div class= "collapse navbar-collapse" id= "navbarSupportedContent">
+            <ul class = "navbar-nav ml-auto">
+                <li id="menu-item-444" class="menu-item mr-2">
+                    <%= link_to "About", '#', style: 'color:#FFFFFF;' ,class:"btn btn-outline-secondary" %>
+                </li>
+                <li id="menu-item-444" class="menu-item mr-2">
+                    <%= link_to "ブログ", "http://makboxnote.blog.fc2.com/", style: 'color:#FFFFFF;' ,class:"btn btn-outline-secondary" %>
+                </li>
+                <li id="menu-item-444" class="menu-item mr-2">
+                    <%= link_to "お問い合わせ", '#' , style: 'color:#FFFFFF;' ,class:"btn btn-outline-secondary" %>
+                </li>
+                <li id="menu-item-444" class="menu-item mr-2">
+                    <%= link_to "Twitter","https://twitter.com/meiji_ak", style: 'color:#FFFFFF;' ,class:"btn btn-outline-secondary" %>
+                </li>
+                <!--<%# if !user_signed_in? %>
+                <li id="menu-item-444" class="menu-item mr-2">
+                    <%#= link_to "ログイン", '#', style: 'color:#FFFFFF;', class: "btn btn-outline-secondary" %>
+                </li>
+                <%#  elsif user_signed_in?  %>
+                        <div class="dropdown show mr-2">
+                          <li class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            メンバー
+                          </li>
+                        
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li class="dropdown-item">
+                                <%#= link_to "マイページ", '#user_path(:id)', class:"text-dark" %>
+                            </li>
+                            <div class="dropdown-divider"></div>
+                            <li class="dropdown-item">
+                                <%#= link_to "ログアウト", '#destroy_user_session_path', method: :delete, class:"text-dark" %>
+                            </li>
+                          </div>
+                        </div>
+                        
+                <%# elsif admin_signed_in? %>
+                        <!--<div class="dropdown show mr-2">
+                            <li class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            管理員
+                            </li>
+                        
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li class="dropdown-item">
+                                    <%#= link_to "ユーザー一覧", admins_users_path, class:"text-dark" %>
+                                </li>
+                                <li class="dropdown-item">
+                                    <%#= link_to "ニュース一覧", news_index_path, class:"text-dark" %>
+                                </li>
+                            <div class="dropdown-divider"></div>
+                                <li class="dropdown-item">
+                                <%#= link_to "ログアウト", destroy_admin_session_path, method: :delete, class:"text-dark" %>
+                                </li>
+                          </div>
+                        </div>-->
+                <%# end %>
+    </div>
+</header>

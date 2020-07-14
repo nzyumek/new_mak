@@ -1,0 +1,64 @@
+@charset "UTF-8";
+main {
+  // height: calc(100vh - 50px);
+  min-height: calc(100vh - 76px);//0409修正
+  padding-top: 60px;
+}
+
+:root {
+  --text-bright-color: #fff;
+  --icon-color: #fff;
+  --icon-bk-color: #ddd;
+  --accent-color: #BF6A7A;
+  --main-color: #5D9AB2;
+}
+
+footer {
+  height: 100px;
+  background-color: #242424;
+}
+
+.bg-home {
+  background-color: #fff;
+}
+
+.container-fluid {
+  padding: 0px !important;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #242424;
+}
+ 
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.carousel{
+  min-height: 180px;
+}
+
+.carousel-item img {
+    height: 30vh;
+}
+
+body {
+    margin: 0;
+    font-family: 'メイリオ',
+        'Hiragino Kaku Gothic Pro',
+        sans-serif;
+    padding: 0;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+header {
+  height: 60px;
+}
