@@ -1,0 +1,2 @@
+module MakHelper
+end
