@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :newsfeeds
+  get '/abouts', to: 'about#index'
   root 'mak#home'
   #get '/about', to: 'mak#about'
   #get '/news', to: 'mak#news'

@@ -76,3 +76,5 @@ gem 'image_processing', '~> 1.2'
 gem 'cancancan'
 
 gem 'bcrypt', '~> 3.1.7'
+
+gem 'autoprefixer-rails' 

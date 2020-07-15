@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @newsfeed.title %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @newsfeed.date %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @newsfeed.content %>
+</p>
+
+<%= link_to 'Edit', edit_newsfeed_path(@newsfeed) %> |
+<%= link_to 'Back', newsfeeds_path %>

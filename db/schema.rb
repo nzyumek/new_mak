@@ -10,6 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_07_15_060537) do
+
+  create_table "abouts", force: :cascade do |t|
+    t.text "lunch"
+    t.text "regular"
+    t.text "event"
+    t.text "camp"
+    t.string "room"
+    t.text "homeinfo"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "newsfeeds", force: :cascade do |t|
+    t.string "title"
+    t.date "date"
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["created_at"], name: "index_newsfeeds_on_created_at"
+  end
 
 end
