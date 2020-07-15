@@ -17,7 +17,8 @@
       <h2>更新情報</h2>
       <ul class="list-group list-group-flush">
         <% @newsfeeds.each do |newsfeed| %>
-         <li class="list-group-item"><%= newsfeed.date.strftime("%Y年%m月%d日") %>  <%= newsfeed.title %>  <%= newsfeed.content %></li>
+         <li class="list-group-item"><%= newsfeed.date %>  <%= newsfeed.title %>  <%= newsfeed.content %></li>
+         <!--<li class="list-group-item"><%#= newsfeed.date.strftime("%Y年%m月%d日") %>  <%#= newsfeed.title %>  <%#= newsfeed.content %></li>-->
         <% end %>
         <li class="list-group-item"><%= link_to 'MORE...', newsfeeds_path, class: "newslink"%>
         <span class="fas fa-chevron-right"></span></li>
