@@ -33,12 +33,10 @@
     <div class-"text">
       <h3>明治大学アナウンス研究会</h3>
           <div>
-            <%# @abouts.each do |about| %>
               <div class="about">
-                <%#= safe_join(about.heading.split("\n"),tag(:br)) %>
+                  <p>発声、原稿読み、トーク練習、ネットラジオ、などなど盛りだくさんの練習や活動をしております。楽しい活動と愉快な仲間たちの様子をぜひぜひ覗いてみてください！</p>
               </div>
               <%= link_to 'MORE... ', abouts_path, class:"aboutlink" %><span class="fas fa-chevron-right"></span>
-            <%# end %>  
           </div>
       </div>
   </div>  
@@ -46,7 +44,7 @@
 
 <section class="conD">
   <div class="container">
-    <%#= render 'inquiry/form', post: @inquiry %>
+    <%= render 'inquiry/form', post: @inquiry %>
   </div>
   <%#= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"text-dark" %>
 </section>
