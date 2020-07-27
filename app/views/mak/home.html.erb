@@ -13,38 +13,37 @@
 
 <section class="conB">
   <div class="container">
+      <h2>明治大学アナウンス研究会とは</h2>
+          <div class="about">
+                  <p>発声、原稿読み、トーク練習、ネットラジオ、などなど盛りだくさんの練習や活動をしております。</p>
+                  <p>楽しい活動と愉快な仲間たちの様子をぜひぜひ覗いてみてください！</p>
+              <%= link_to 'MORE... ', abouts_path, class:"aboutlink" %></span>
+          </div>
+  </div>  
+</section>  
+
+<section class="conC">
+  <div class="container">
     <div class="text">
       <h2>更新情報</h2>
       <ul class="list-group list-group-flush">
         <% @newsfeeds.each do |newsfeed| %>
-         <li class="list-group-item"><%= newsfeed.date %>  <%= newsfeed.title %>  <%= newsfeed.content %></li>
+        <li class="list-group-item"><%= newsfeed.date.strftime("%Y年%m月%d日") %>  <%= newsfeed.title %>  <%= newsfeed.content %></li>
          <!--<li class="list-group-item"><%#= newsfeed.date.strftime("%Y年%m月%d日") %>  <%#= newsfeed.title %>  <%#= newsfeed.content %></li>-->
         <% end %>
-        <li class="list-group-item"><%= link_to 'MORE...', newsfeeds_path, class: "newslink"%>
-        <span class="fas fa-chevron-right"></span></li>
+        <li class="list-group-item"><%= link_to 'MORE...', newsfeeds_path, class: "newslink"%></li>
       </ul>
     </div>
 </div>
 </section>
 
-<section class="conC">
-  <div class="container">
-    <div class="image"></div>
-    <div class-"text">
-      <h3>明治大学アナウンス研究会</h3>
-          <div>
-              <div class="about">
-                  <p>発声、原稿読み、トーク練習、ネットラジオ、などなど盛りだくさんの練習や活動をしております。楽しい活動と愉快な仲間たちの様子をぜひぜひ覗いてみてください！</p>
-              </div>
-              <%= link_to 'MORE... ', abouts_path, class:"aboutlink" %><span class="fas fa-chevron-right"></span>
-          </div>
-      </div>
-  </div>  
-</section>  
+
 
 <section class="conD">
   <div class="container">
-    <%= render 'inquiry/form', post: @inquiry %>
+    <div class="text">
+      <%= render 'inquiry/form', post: @inquiry %>
+    </div>
   </div>
   <%#= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"text-dark" %>
 </section>

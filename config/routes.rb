@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  resources :youtube_posts
   devise_for :users
+  resources :users do
+  end
   resources :newsfeeds
   get '/abouts', to: 'about#index'
   root 'mak#home'

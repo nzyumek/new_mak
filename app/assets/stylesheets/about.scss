@@ -6,8 +6,20 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 h1 {
     text-align: center;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 4rem !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
 }
 
 .container {
     height: calc(100% - 60px);
+}
+
+th {
+    font-size: 20px !important;
+}
+
+td {
+    font-size: 15px !important;
 }

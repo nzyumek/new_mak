@@ -3,6 +3,7 @@ require "application_system_test_case"
 class NewsfeedsTest < ApplicationSystemTestCase
   setup do
     @newsfeed = newsfeeds(:one)
+    #@user = users(:yume)
   end
 
   test "visiting the index" do

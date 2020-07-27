@@ -1,9 +1,14 @@
 require 'test_helper'
 
 class NewsfeedsControllerTest < ActionDispatch::IntegrationTest
-  setup do
+  include Devise::Test::IntegrationHelpers
+
+  
+  def setup
+    sign_in FactoryBot.create(:user)
     @newsfeed = newsfeeds(:one)
   end
+  
 
   test "should get index" do
     get newsfeeds_url
@@ -45,4 +50,7 @@ class NewsfeedsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to newsfeeds_url
   end
+  
+
+  
 end

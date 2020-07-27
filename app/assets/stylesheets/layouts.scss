@@ -10,7 +10,7 @@ main {
   --icon-color: #fff;
   --icon-bk-color: #ddd;
   --accent-color: #BF6A7A;
-  --main-color: #5D9AB2;
+  --main-color: #FBF9ED;
 }
 
 footer {
@@ -49,10 +49,10 @@ footer {
 
 body {
     margin: 0;
-    font-family: 'メイリオ',
-        'Hiragino Kaku Gothic Pro',
-        sans-serif;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 15px;
     padding: 0;
+    background-color: #FBF9ED !important;
 }
 
 .container-fluid {

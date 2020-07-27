@@ -6,6 +6,29 @@ body {
     padding: 0;
 }
 
+h2 {
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+    font-size: 40px ;
+    text-align: center;
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
+p {
+    font-size: 20px !important;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
+.text {
+    border: double;
+    border-bottom: transparent;
+    border-left: transparent;
+    border-right: transparent;
+}
+
 /* conA: ヒーローイメージ*/
 
 .conA {
@@ -108,77 +131,40 @@ body {
     max-width: 180px;
 }
 
-/* conB: お知らせ*/
+/* conB: ABOUT */
 .conB {
-
-    padding-bottom: 10px;
-}
-
-.conB h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 20px;
-}
-
-.conB newslink:hover {
-    text-decoration: underline;
-}
-
-.conB .icon{
-    display: inline-block;
-    margin-bottom: 20px;
-    font-size: 40px;
-    width: 2em;
-    line-height: 2em;
-    border-radius: 50%;
-    text-align: center;
-    background-color: #ddd;
-    background-color: var(--icon-bk-color);
-    color: #fff;
-    color: var(--icon-color);
-}
-
-.conB text{
-    text-align: center;
-}
-
-/* conC: ABOUT */
-.conC {
-    background-color: #444444;
-    color: #fff;
-    color: var(--text-bright-color);
+    // background-color: #444444;
+    // color: #fff;
+    // color: var(--text-bright-color);
     width: 100%;
+    height: 300px;
     padding: 20px 20px;
+
 }
 
-.conC .image{
+.conB .image{
     min-height: 200px;
     background-image: url(mic.jpg);
     background-position: center;
     background-size: cover;
 }
 
-.conC .text {
+.conB .text {
     padding: 20px;
 }
 
 
 
-.conC h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 20px;
-}
-
-.conC .about{
+.conB .about{
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 14px;
     line-height: 1.8;
     opacity: 0.8;
+    text-align: center;
 }
 
-.conC .aboutlink{
+.conB .aboutlink{
     display: inline-block;
     margin-top: 20px;
     padding: 10px 30px;
@@ -192,18 +178,82 @@ body {
     text-decoration: none;
 }
 
-.conC .aboutlink:hover {
+.conB .aboutlink:hover {
     background-image: linear-gradient(
     rgba(255, 255, 255, 0.2),
     rgba(255, 255, 255, 0.2)
     );
 }
 
+/* conC: お知らせ*/
+.conC {
+    padding-bottom: 10px;
+    // height: 300px ;
+}
+
+// .conC h2 {
+//     margin-top: 0;
+//     margin-bottom: 20px;
+//     font-size: 20px;
+//     font-family: 'Kosugi Maru', sans-serif;
+//     text-align: center;
+// }
+
+.conC .newslink{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: solid 3px currentColor;
+    border-radius: 6px;
+    background: #BF6A7A;
+    background-color: var(--accent-color);
+    color: #fff;
+    color: var(--text-bright-color);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.conC .newslink:hover {
+    text-decoration: underline;
+}
+
+.conC .icon{
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 40px;
+    width: 2em;
+    line-height: 2em;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #ddd;
+    background-color: var(--icon-bk-color);
+    color: #fff;
+    color: var(--icon-color);
+}
+
+.conC .text{
+    text-align: center;
+}
+
+.conC .list-group {
+    font-size: 25px !important;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
+.conC .list-group-item {
+    padding-top: 20px;
+}
+
+/* conD*/
+
 .conD {
     padding: 10px 0px;
 }
 
-.text {
+.conD .text {
     font-size: 16px ;
 }
 

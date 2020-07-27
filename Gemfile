@@ -54,6 +54,7 @@ group :test do
   gem 'minitest-reporters',       '1.3.8'
   gem 'guard',                    '2.16.2'
   gem 'guard-minitest',           '2.4.6'
+  gem 'factory_bot_rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -78,3 +79,5 @@ gem 'cancancan'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'autoprefixer-rails' 
+
+gem 'actiontext'

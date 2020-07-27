@@ -1,7 +1,12 @@
 require 'test_helper'
 
 class NewsfeedTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  include Devise::Test::IntegrationHelpers
+
+  
+  def setup
+    sign_in FactoryBot.create(:user)
+  end
+  
+
 end
