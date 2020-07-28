@@ -6,23 +6,31 @@ class Ability
   def initialize(user)
     # Define abilities for the passed in user here. For example:
     #
-    can :manage, :session
+
+    
     
        user ||= User.new # guest user (not logged in)
        Rails.logger.debug "#{user.role}"
+        can :manage, :session
+        can :manage, Inquiry
+        can :read, Newsfeed
+        can :manage, :registration
+        can :manage, :mak
+        can :read, :about
        
        if user.admin? or user.fuku_kan? or user.fuku_kan_gi? or user.fuku_kan_edi? or user.fuku_kan_sho? or user.fuku_kan_so? or user.fuku_kan_pra?
          can :manage, :all
        end
        
        if user.gijutsu? or user.gijutsu_manager? or user.shougai? or user.shougai_manager? or user.accountant? or user.practise? or user.practise_manager? or user.editor? or user.editor_manager? or user.soumu? or user.soumu_manager? or user.shibuchou? or user.fuku_shibuchou? 
-         can :read, [:member_list, :youtube, :news, :about, :home, :inquiry, :user, :registration]
+         can :read, [:user, Youtube, :member_list]
+         can :manage, :registration
          #can :edit, [:member_list, :youtube, :news, :about, :home, :inquiry, :user, :registration]
        end
        
-       if user.general?
-        can :manage, :mak #:makがモデルないため、コントローラーに設定しないといけませんが、理解できていません。
+       if user.general? #:makがモデルないため、コントローラーに設定しないといけませんが、理解できていません。
         can :manage, :registration
+        can :manage, :user
        end
        
        #if authenticate_admin!
@@ -31,6 +39,7 @@ class Ability
        
        if user.ob?
          can :read, :youtube
+         can :manage, :registration
        end
        
        
