@@ -1,5 +1,30 @@
 class User < ApplicationRecord
-
+  enum role: { 
+    general: 1, 
+    ob: 2,
+    shibuchou: 11,
+    fuku_shibuchou: 12,
+    gijutsu_sup: 21,
+    gijutsu: 28,
+    gijutsu_manager: 29,
+    shougai_sup: 31,
+    shougai: 38,
+    shougai_manager: 39,
+    accountant: 90,
+    practise: 41,
+    practise_manager: 42,
+    editor: 51,
+    editor_manager: 52,
+    soumu: 61,
+    soumu_manager: 62,
+    fuku_kan_edi: 91,
+    fuku_kan_gi: 92,
+    fuku_kan_pra: 93,
+    fuku_kan_sho: 94,
+    fuku_kan_so: 95,
+    fuku_kan: 98,
+    admin: 99 }
+  
     
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

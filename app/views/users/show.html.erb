@@ -2,30 +2,32 @@
     <section class="greeting">
         <h1>お帰りなさい。<%= @user.lastn %><%= @user.firstn %></h1>
     </section>
-    <section class="home-table">
+    <section class="user-table">
         <div class="row">
             <div class="user-info col-md-4">
+                <h2>プロフィール</h2>
                 No.<%= @user.id %>
                 <h2><%= @user.gen %>期</h2>
-                <h2><%= @user.lastn %><%= @user.firstn %></h2>
-                <h3><%= @user.bachelor %>学部</h3>
-                <h3><%= @user.major %>学科</h3>
+                <h2>氏名：<%= @user.lastn %><%= @user.firstn %></h2>
+                <h3>学部：<%= @user.bachelor %>学部</h3>
+                <h3>学科：<%= @user.major %>学科</h3>
                 
                 <%= link_to 'Edit Profile', edit_user_registration_path %>
             </div>
     
-        <div class="user-right col-md-8">
-                
-                <!--<%# if can? :read, :member_list %>-->
+        <div class="user-right col-md-offset-1 col-md-7">
+            <div class="user-menu">
+                <% if can? :read, :member_list %>
                     <%= link_to "ユーザー一覧", users_path %>
-                <!--<%# end %>-->
-                <!--<%# if can? :read, :user %>-->
-                <!--  <h1>You can read member</h1>-->
-                <!--<%# end %>-->
-            <div class="youtube">
-                 <%= link_to "歴代番発", youtube_posts_path %>
-                 <%= link_to image_tag("logo.png", size: '40x40'), "https://drive.google.com/drive/folders/17q0nL9AaP6jpS_UNcPf2YnFBY3aBmaNN?usp=sharing" %>
-                 <%#= link_to "機材一覧", youtubes_path %>
+                <% end %>
+                <% if can? :read, :user %>
+                  <h1>You can read member</h1>
+                <% end %>
+                <div class="youtube">
+                     <%= link_to "歴代番発", youtube_posts_path %>
+                     <%= link_to image_tag("logo.png", size: '40x40'), "https://drive.google.com/drive/folders/17q0nL9AaP6jpS_UNcPf2YnFBY3aBmaNN?usp=sharing" %>
+                     <%#= link_to "機材一覧", youtubes_path %>
+                </div>
             </div>
         </div>
     </section>

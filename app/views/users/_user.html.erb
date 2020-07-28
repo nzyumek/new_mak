@@ -12,6 +12,11 @@
             <%= user.h_lastn %><%= user.h_firstn %>
         </td>
         <td>
+            <% if current_user.admin? %>
+                <%= user.studno %>
+            <% end %>            
+        </td>
+        <td>
             <%= user.bachelor %>学部
         </td>
         <td>
@@ -21,15 +26,17 @@
             <%= user.email %>
         </td>
         <td>
-                <%= link_to "Edit", edit_user_registration_path(user.id) %> <%= link_to "Show", user_path(user) %>
+            <% if user.general? %>
+                一般
+            <% elsif user.gijutsu_manager? %>
+               技術部長
+            <% elsif user.admin? %>
+                管理員
+            <% end %>
         </td>
-        <!--<td>-->
-        <!--    <%# if user.general? %>-->
-        <!--        一般-->
-        <!--    <%# elsif user.gijutsu_manager? %>-->
-        <!--       技術部長-->
-        <!--    <%# elsif user.admin? %>-->
-        <!--        管理員-->
-        <!--    <%# end %>-->
-        <!--</td>-->
+        <td>
+            <% if current_user.admin? %>
+                <%= link_to "Edit", edit_user_path(user.id) %>
+            <% end %>
+        </td>        
       </tr>

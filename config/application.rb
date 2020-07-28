@@ -23,5 +23,10 @@ module NewMak
       # ファクトリファイルの置き場を変更
       g.factory_bot dir: 'custom/dir/for/factories'
     end
+    
+    config.to_prepare do
+      ActionText::ContentHelper.allowed_tags << "iframe"
+    end
+
   end
 end

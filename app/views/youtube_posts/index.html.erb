@@ -1,28 +1,30 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Youtube Posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @youtube_posts.each do |youtube_post| %>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  
+  <h1>Youtube Posts</h1>
+  
+  <table>
+    <thead>
       <tr>
-        <td><%= youtube_post.title %></td>
-        <td><%= youtube_post.content %></td>
-        <td><%= link_to 'Show', youtube_post %></td>
-        <td><%= link_to 'Edit', edit_youtube_post_path(youtube_post) %></td>
-        <td><%= link_to 'Destroy', youtube_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Title</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Youtube Post', new_youtube_post_path %>
+    </thead>
+  
+    <tbody>
+      <% @youtube_posts.each do |youtube_post| %>
+        <tr>
+          <td><%= youtube_post.title %></td>
+          <td><%= youtube_post.content %></td>
+          <td><%= link_to 'Edit', edit_youtube_post_path(youtube_post) %></td>
+          <td><%= link_to 'Destroy', youtube_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+  <br>
+  <% if current_user.admin? %> 
+    <%= link_to 'New Youtube Post', new_youtube_post_path %>
+  <% end %>
+</div>
