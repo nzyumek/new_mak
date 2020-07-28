@@ -1,6 +1,11 @@
       <tr>
         <td>
             <%= user.id %>
+             <% if user.image.blank? %>
+                    <%= image_tag 'https://chugakujuken.net/wp-content/uploads/2018/12/noimage.png', :width => '100', :height => 'auto' %>
+                <% else %>
+                   <%= image_tag user.image, :width => '100', :height => 'auto' %>
+                <% end %>   
         </td>
         <td>
             <%= user.gen %>

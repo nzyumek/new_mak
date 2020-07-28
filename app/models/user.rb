@@ -44,4 +44,6 @@ class User < ApplicationRecord
     validates :gen, presence: true
     validates :studno, presence: true
   
+  has_one_attached :image
+  
 end

@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
         
     def configure_permitted_parameters
         
-        added_attrs = [ :gen, :firstname, :lastname, :f_firstname, :f_lastname, :gakubu, :gakka, :username, :email, :g_number, :role]
+        added_attrs = [ :gen, :firstname, :lastname, :f_firstname, :f_lastname, :gakubu, :gakka, :username, :email, :g_number, :role, :image]
         # サインアップ時にnameのストロングパラメータを追加
         devise_parameter_sanitizer.permit(:sign_up, keys: added_attrs)
         # アカウント編集の時にnameとprofileのストロングパラメータを追加
