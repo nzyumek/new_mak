@@ -5,15 +5,11 @@ class Ability
 
   def initialize(user)
     # Define abilities for the passed in user here. For example:
-    #
-
-    
-    
        user ||= User.new # guest user (not logged in)
        Rails.logger.debug "#{user.role}"
         can :manage, :session
-        can :manage, Inquiry
-        can :read, Newsfeed
+        can :manage, :inquiry
+        can :read, :newsfeed
         can :manage, :registration
         can :manage, :mak
         can :read, :about
@@ -41,8 +37,7 @@ class Ability
          can :read, :youtube
          can :manage, :registration
        end
-       
-       
+
         # can :manage, :all
       # end
     

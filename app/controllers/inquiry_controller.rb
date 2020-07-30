@@ -1,5 +1,6 @@
 class InquiryController < ApplicationController
     def index
+      Rails.logger.debug "this is InquiryController#index"
     # 入力画面を表示
         @inquiry = Inquiry.new
         render :action => 'index'

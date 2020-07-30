@@ -17,7 +17,7 @@
           <div class="about">
                   <p>発声、原稿読み、トーク練習、ネットラジオ、などなど盛りだくさんの練習や活動をしております。</p>
                   <p>楽しい活動と愉快な仲間たちの様子をぜひぜひ覗いてみてください！</p>
-              <%= link_to 'MORE... ', abouts_path, class:"aboutlink" %></span>
+              <%= link_to 'MORE... ', abouts_path, class:"aboutlink" %>
           </div>
   </div>  
 </section>  
@@ -42,6 +42,10 @@
 <section class="conD">
   <div class="container">
     <div class="text">
+        <div class="page-header">
+          <h2>お問い合わせ</h2>
+          <p>返信は数日...</p>
+        </div>
       <%= render 'inquiry/form', post: @inquiry %>
     </div>
   </div>

@@ -13,9 +13,37 @@ main {
   --main-color: #FBF9ED;
 }
 
+h2 {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+    font-size: 3rem !important ;
+    text-align: center;
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
+p {
+    font-size: 20px !important;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Kosugi Maru', sans-serif ;
+}
+
+th {
+    font-size: 15px !important;
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
 footer {
-  height: 100px;
+  height: 60px;
   background-color: #242424;
+  color: #fff;
+  
+}
+
+.footer-item {
+  margin-top: 10px !important;
+  text-align: center;
 }
 
 .bg-home {
@@ -32,6 +60,7 @@ footer {
   /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #242424;
+  color: #fff !important;
 }
  
 .footer > .container {

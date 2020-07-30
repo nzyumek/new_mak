@@ -6,27 +6,32 @@ body {
     padding: 0;
 }
 
-h2 {
-    margin-top: 30px !important;
-    margin-bottom: 20px !important;
-    font-size: 40px ;
-    text-align: center;
-    font-family: 'Kosugi Maru', sans-serif;
-}
+// h2 {
+//     margin-top: 30px !important;
+//     margin-bottom: 30px !important;
+//     font-size: 3rem !important ;
+//     text-align: center;
+//     font-family: 'Kosugi Maru', sans-serif;
+// }
 
-p {
-    font-size: 20px !important;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    text-align: center;
-    font-family: 'Kosugi Maru', sans-serif;
-}
+// p {
+//     font-size: 20px !important;
+//     margin-top: 20px;
+//     margin-bottom: 10px;
+//     text-align: center;
+//     font-family: 'Kosugi Maru', sans-serif ;
+// }
 
 .text {
     border: double;
     border-bottom: transparent;
     border-left: transparent;
     border-right: transparent;
+}
+
+.list-group-item {
+    font-family: 'verdana', 'arial', 'helvetica', sans-serif ;
+    font-size: 20px;
 }
 
 /* conA: ヒーローイメージ*/
