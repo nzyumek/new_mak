@@ -81,3 +81,6 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'autoprefixer-rails' 
 
 gem 'actiontext'
+
+gem 'kaminari', '~> 0.17.0'
+gem 'kaminari-bootstrap', '~> 3.0.1'

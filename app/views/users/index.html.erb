@@ -1,4 +1,13 @@
         <div class="container">
+          <%= form_tag(users_path, method: "get") do %>
+          <%= select_tag(:gen, @gen) %>
+          <%#= collection_select(:gen, @gen, :id, :name, selected: @search_params[:gen], include_blank: t('helpers.select.include_blank')) %>
+          <%= submit_tag "絞り込み" %>
+
+          <%# @users.each do |user| %>
+            <%#= user %>              
+          <%# end %>
+          <% end %>
             <table class="table">
               <thead>
                 <tr>
@@ -19,7 +28,10 @@
                 </tr>
               </thead>
               <tbody>
+                
                   <%= render @users %>
+              
               </tbody>
             </table>
+            <%= paginate @users %>
         </div>

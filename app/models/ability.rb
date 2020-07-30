@@ -23,7 +23,7 @@ class Ability
        end
        
        if user.gijutsu? or user.gijutsu_manager? or user.shougai? or user.shougai_manager? or user.accountant? or user.practise? or user.practise_manager? or user.editor? or user.editor_manager? or user.soumu? or user.soumu_manager? or user.shibuchou? or user.fuku_shibuchou? 
-         can :read, [:user, Youtube, :member_list]
+         can :read, [:user, YoutubePost, :member_list]
          can :manage, :registration
          #can :edit, [:member_list, :youtube, :news, :about, :home, :inquiry, :user, :registration]
        end
@@ -31,6 +31,7 @@ class Ability
        if user.general? #:makがモデルないため、コントローラーに設定しないといけませんが、理解できていません。
         can :manage, :registration
         can :manage, :user
+        can :read, :youtube_post
        end
        
        #if authenticate_admin!
