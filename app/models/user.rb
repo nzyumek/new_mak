@@ -46,4 +46,12 @@ class User < ApplicationRecord
   
   has_one_attached :image
   
+  # scope :search, -> (search_params) do
+  #   return if search_params.blank?
+
+  #   name_like(search_params[:name])
+  #     .gen_is(search_params[:gen])
+  # end
+  # scope :gen_is, -> (gen) { where(gen: gen) if gen.present? }
+  
 end
