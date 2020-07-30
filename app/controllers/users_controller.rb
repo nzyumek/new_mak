@@ -5,6 +5,13 @@ class UsersController < ApplicationController
     # @search_params = user_search_params
     # @users = User.search(@search_params)
     @gen = User.group(:gen).pluck(:gen).sort
+    
+    if !params[:gen].blank?
+      @users = User.where(gen: params[:gen]).page(params[:page]).per(3).order(:id)
+    else
+      @users = User.all.page(params[:page]).per(3).order(:id)
+    end
+    
     # if params[:gen] == "未選択"
     #   @users = User.all
     # else
