@@ -24,7 +24,7 @@ class Ability
          #can :edit, [:member_list, :youtube, :news, :about, :home, :inquiry, :user, :registration]
        end
        
-       if user.general? #:makがモデルないため、コントローラーに設定しないといけませんが、理解できていません。
+       if user.member? #:makがモデルないため、コントローラーに設定しないといけませんが、理解できていません。
         can :manage, :registration
         can :manage, :user
         can :read, :youtube_post

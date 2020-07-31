@@ -32,9 +32,53 @@
         </td>
         <td>
             <% if user.general? %>
-                一般
+               承認待ち
+            <% elsif user.member? %>
+                一般会員
+            <% elsif user.shibuchou? %>
+            支部長
+            <% elsif user.fuku_shibuchou? %>
+            副支部長
+            <% elsif user.shougai_sup? %>
+            渉外補佐
+            <% elsif user.shougai? %>
+            渉外部長
+            <% elsif user.shougai_manger? %>
+            渉外部長部長
+            <% elsif user.gijutsu_sup? %>
+            技術補佐
+            <% elsif user.gijutsu? %>
+            技術部長
             <% elsif user.gijutsu_manager? %>
-               技術部長
+            技術部長部長
+            <% elsif user.practise? %>
+            練習部長
+            <% elsif user.practise_manager? %>
+            練習部長部長
+            <% elsif user.accountant? %>
+            会計
+            <% elsif user.editor? %>
+            編集
+            <% elsif user.editor_manger? %>
+            編集部長
+            <% elsif user.soumu? %>
+            総務
+            <% elsif user.soumu_manager? %>
+            総務部長
+            <% elsif user.fuku_kan? %>
+            副幹事長
+            <% elsif user.fuku_kan_gi? %>
+            副幹事長・技術部長
+            <% elsif user.fuku_kan_so? %>
+            副幹事長・総務
+            <% elsif user.fuku_kan_sho? %>
+            副幹事長・渉外部長
+            <% elsif user.fuku_kan_edi? %>
+            副幹事長・編集
+            <% elsif user.kanjichou? %>
+            幹事長
+            <% elsif user.fuku_kan_pra? %>
+               副幹事長・練習部長
             <% elsif user.admin? %>
                 管理員
             <% end %>

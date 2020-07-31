@@ -3,7 +3,7 @@
 <%= form_with(model: @user, url: user_path(@user)) do |f| %>
   <%= @user.lastn %><%= @user.firstn %>
   <%= f.label :role %><br />
-  <%= f.select :role, {'一般' => 'general', '支部長' => 'shibuchou', '副支部長' => 'fuku_shibuchou', '渉外補佐' => 'shougai_sup', '渉外部長' => 'shougai', '渉外部長部長' => 'shougai_manger', '技術補佐' => 'gijutsu_sup', '技術部長' => 'gijutsu', '技術部長部長' => 'gijutsu_manager', '練習部長部長' => 'practise_manager', '練習部長' => 'practise', '会計' => 'accountant', '編集部長' => 'editor_manger', '編集' => 'editor', '総務部長' => 'soumu_manager', '総務' => 'soumu', '副幹事長' => 'fuku_kan', '副幹事長・技術部長' => 'fuku_kan_gi', '副幹事長・総務' => 'fuku_kan_so', '副幹事長・渉外部長' => 'fuku_kan_sho', '副幹事長・編集' => 'fuku_kan_edi', '副幹事長・練習部長' => 'fuku_kan_pra', '幹事長・管理員'=> 'admin'}, {selected: 'member', include_blank: false}, {autofocus: 'true', class: 'form-control'} %>
+  <%= f.select :role, {'承認待ち' => 'general', '一般会員' => 'member', '支部長' => 'shibuchou', '副支部長' => 'fuku_shibuchou', '渉外補佐' => 'shougai_sup', '渉外部長' => 'shougai', '渉外部長部長' => 'shougai_manger', '技術補佐' => 'gijutsu_sup', '技術部長' => 'gijutsu', '技術部長部長' => 'gijutsu_manager', '練習部長部長' => 'practise_manager', '練習部長' => 'practise', '会計' => 'accountant', '編集部長' => 'editor_manger', '編集' => 'editor', '総務部長' => 'soumu_manager', '総務' => 'soumu', '副幹事長' => 'fuku_kan', '副幹事長・技術部長' => 'fuku_kan_gi', '副幹事長・総務' => 'fuku_kan_so', '副幹事長・渉外部長' => 'fuku_kan_sho', '副幹事長・編集' => 'fuku_kan_edi', '副幹事長・練習部長' => 'fuku_kan_pra', '幹事長'=> 'kanjichou', '管理員'=> 'admin'}, {selected: 'member', include_blank: false}, {autofocus: 'true', class: 'form-control'} %>
   <%= f.submit %>
 <% end %>
 </div>

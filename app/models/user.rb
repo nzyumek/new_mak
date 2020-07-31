@@ -2,6 +2,7 @@ class User < ApplicationRecord
   enum role: { 
     general: 1, 
     ob: 2,
+    member: 3,
     shibuchou: 11,
     fuku_shibuchou: 12,
     gijutsu_sup: 21,
@@ -17,6 +18,7 @@ class User < ApplicationRecord
     editor_manager: 52,
     soumu: 61,
     soumu_manager: 62,
+    kanjichou: 90,
     fuku_kan_edi: 91,
     fuku_kan_gi: 92,
     fuku_kan_pra: 93,
