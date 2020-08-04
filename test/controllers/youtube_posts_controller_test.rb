@@ -1,9 +1,14 @@
 require 'test_helper'
 
 class YoutubePostsControllerTest < ActionDispatch::IntegrationTest
-  setup do
+  include Devise::Test::IntegrationHelpers
+
+  def setup
+    sign_in FactoryBot.create(:user)
     @youtube_post = youtube_posts(:one)
-  end
+  end  
+
+
 
   test "should get index" do
     get youtube_posts_url

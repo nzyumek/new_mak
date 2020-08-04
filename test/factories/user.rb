@@ -15,5 +15,6 @@ FactoryBot.define do
     h_lastn { "h_lastn" }
     gen { "50" }
     studno { "11111111" }
+    role { "admin" }
   end
 end

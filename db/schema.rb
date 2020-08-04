@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_28_090230) do
+ActiveRecord::Schema.define(version: 2020_07_31_044942) do
 
   create_table "abouts", force: :cascade do |t|
     t.text "lunch"
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2020_07_28_090230) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "email"
+    t.integer "select"
   end
 
   create_table "newsfeeds", force: :cascade do |t|
