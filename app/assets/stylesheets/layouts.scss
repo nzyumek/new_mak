@@ -3,6 +3,7 @@ main {
   // height: calc(100vh - 50px);
   min-height: calc(100vh - 76px);//0409修正
   padding-top: 60px;
+  font-family: 'Kosugi Maru', sans-serif;
 }
 
 :root {
@@ -13,25 +14,62 @@ main {
   --main-color: #FBF9ED;
 }
 
-h2 {
-    margin-top: 30px !important;
-    margin-bottom: 30px !important;
-    font-size: 3rem !important ;
-    text-align: center;
-    font-family: 'Kosugi Maru', sans-serif;
+// h2 {
+//     margin-top: 30px !important;
+//     margin-bottom: 30px !important;
+//     font-size: 3rem !important ;
+//     text-align: center;
+//     font-family: 'Kosugi Maru', sans-serif;
+// }
+
+// p {
+//     font-size: 20px !important;
+//     margin-top: 20px;
+//     margin-bottom: 10px;
+//     text-align: center;
+//     font-family: 'Kosugi Maru', sans-serif ;
+// }
+
+h3 {
+    font-weight: 800 !important;
+    line-height: 1.25em !important;
+    color: rgb(72, 72, 72) !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    margin: 0px !important;
+    font-size: 24px !important;
 }
 
 p {
-    font-size: 20px !important;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+    overflow-wrap: break-word !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.75em !important;
+    color: rgb(72, 72, 72) !important;
+}
+
+h2 {
+    font-size: 50px !important;
+    line-height: 64px !important;
+    letter-spacing: -2.5px !important;
+    font-weight: 900 !important;
+    color: rgb(51, 51, 51) !important;
     text-align: center;
-    font-family: 'Kosugi Maru', sans-serif ;
+    margin-bottom: 64px !important;
 }
 
 th {
-    font-size: 15px !important;
+    font-size: 20px !important;
     font-family: 'Kosugi Maru', sans-serif;
+}
+
+td {
+    font-family: 'verdana', 'arial', 'helvetica', sans-serif ;
+    font-size: 20px !important;
+    padding-top: 20px;
+    padding-bottom: 7.5px;
 }
 
 footer {
@@ -59,8 +97,8 @@ footer {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #242424;
-  color: #fff !important;
+  background-color: rgb(247, 247, 247) !important;
+  border-top: 1px solid rgb(221, 221, 221) !important;
 }
  
 .footer > .container {
@@ -81,7 +119,7 @@ body {
     font-family: 'Kosugi Maru', sans-serif;
     font-size: 15px;
     padding: 0;
-    background-color: #FBF9ED !important;
+    background-color: #FFF !important;
 }
 
 .container-fluid {
@@ -89,5 +127,5 @@ body {
 }
 
 header {
-  height: 60px;
+  height: 80px;
 }

@@ -1,6 +1,5 @@
       <tr>
         <td>
-            <%= user.id %>
              <% if user.image.blank? %>
                     <%= image_tag 'https://chugakujuken.net/wp-content/uploads/2018/12/noimage.png', :width => '100', :height => 'auto' %>
                 <% else %>
@@ -17,7 +16,7 @@
             <%= user.h_lastn %><%= user.h_firstn %>
         </td>
         <td>
-            <% if current_user.admin? %>
+            <% if current_user.admin? || current_user.fuku_kan? %>
                 <%= user.studno %>
             <% end %>            
         </td>
@@ -43,12 +42,14 @@
             渉外補佐
             <% elsif user.shougai? %>
             渉外部長
-            <% elsif user.shougai_manger? %>
+            <% elsif user.shougai_manager? %>
             渉外部長部長
             <% elsif user.gijutsu_sup? %>
             技術補佐
             <% elsif user.gijutsu? %>
             技術部長
+            <% elsif user.gijutsu_hp? %>
+            技術部長(HP)
             <% elsif user.gijutsu_manager? %>
             技術部長部長
             <% elsif user.practise? %>
@@ -59,7 +60,7 @@
             会計
             <% elsif user.editor? %>
             編集
-            <% elsif user.editor_manger? %>
+            <% elsif user.editor_manager? %>
             編集部長
             <% elsif user.soumu? %>
             総務
@@ -84,7 +85,7 @@
             <% end %>
         </td>
         <td>
-            <% if current_user.admin? %>
+            <% if current_user.admin? || current_user.fuku_kan? %>
                 <%= link_to "Edit", edit_user_path(user.id) %>
             <% end %>
         </td>        

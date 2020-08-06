@@ -1,4 +1,7 @@
 <% provide(:title, "Home") %>
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'home' %>
+<% end %>
 <section class="conA">
     <div class="bgImg src1"></div>
     <div class="bgImg src2"></div>
@@ -7,9 +10,13 @@
     <div class="logoh">
       <%= image_tag 'logo.png', class: 'logo' %>
       <h1>明治大学</h1><h1>アナウンス研究会</h1>
-      <p>明治大学公認サークル</p>
+      <p class="banner-text">明治大学公認サークル</p>
     </div>
 </section>
+
+<div class="space-64">
+    
+</div>
 
 <section class="conB">
   <div class="container">
@@ -17,30 +24,54 @@
           <div class="about">
                   <p>発声、原稿読み、トーク練習、ネットラジオ、などなど盛りだくさんの練習や活動をしております。</p>
                   <p>楽しい活動と愉快な仲間たちの様子をぜひぜひ覗いてみてください！</p>
-              <%= link_to 'MORE... ', abouts_path, class:"aboutlink" %>
+              
           </div>
+      <div class="space-64">
+          
+      </div>
+        <div class="row">
+            <div class="col-md-6">
+                <i class="fas fa-quote-left"></i>
+                <div class="quotation">aaaaaaaaaaa</div>
+                <p>Dennisさんはロンドンのホスト。自由度の高さに魅力を感じています</p>
+                <%= link_to '活動内容', abouts_path, class:"check" %>
+            </div>
+            <div class="col-md-6">
+                <%= image_tag 'yume_dj.jpg', class: "img-responsive center-block" %>
+            </div>            
+        </div>          
   </div>  
 </section>  
 
+<div class="space-96">
+    
+</div>
+
 <section class="conC">
   <div class="container">
+    <div class="line">
+            
+    </div>   
     <div class="text">
-      <h2>更新情報</h2>
+      <h2 class="conC-heading">更新情報</h2>
       <ul class="list-group list-group-flush">
         <% @newsfeeds.each do |newsfeed| %>
-        <li class="list-group-item"><%= newsfeed.date.strftime("%Y年%m月%d日") %>  <%= newsfeed.title %>  <%= newsfeed.content %></li>
+        <a href="newsfeeds/<%= newsfeed.id %>">
+        <li class="list-group-item"><%= newsfeed.date.strftime("%Y年%m月%d日") %> &nbsp;  <%= newsfeed.title %></li>
          <!--<li class="list-group-item"><%#= newsfeed.date.strftime("%Y年%m月%d日") %>  <%#= newsfeed.title %>  <%#= newsfeed.content %></li>-->
         <% end %>
-        <li class="list-group-item"><%= link_to 'MORE...', newsfeeds_path, class: "newslink"%></li>
+        <li class="list-group-item"><%= link_to '更新情報一覧', newsfeeds_path, class: "check"%></li></a>
       </ul>
     </div>
   </div>
 </section>
 
 
-
 <section class="conD">
   <div class="container">
+    <div class="line">
+            
+    </div>     
     <div class="text">
         <div class="page-header">
           <h2>お問い合わせ</h2>

@@ -1,32 +1,41 @@
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'newsfeeds' %>
+<% end %>
 <p id="notice"><%= notice %></p>
 <div class="container">
-  <h1>更新情報</h1>
   
-  <div class="col-md-offset-2 col-md-8">
-    <table>
+  <h1>更新情報</h1>
+  <h3>Whats's new</h3>
+  
+  <div class="news-table">
+    <table class="table">
       <thead>
-        <tr>
-          <th scope="col">日付</th>
-          <th scope="col">タイトル</th>
-          <th scope="col">内容</th>
-          <% if can? :manage, :newsfeed %>
-            <th scope="col">アクション</th>
-          <% end %>
-        </tr>
+        <!--<tr>-->
+        <!--  <th scope="col">日付</th>-->
+        <!--  <th scope="col">タイトル</th>-->
+        <!--  <th scope="col">内容</th>-->
+        <!--  <% if can? :manage, :newsfeed %>-->
+        <!--    <th scope="col">アクション</th>-->
+        <!--  <% end %>-->
+        <!--</tr>-->
     
       </thead>
     
       <tbody>
         <% @newsfeeds.each do |newsfeed| %>
           <tr>
-            <td><%= newsfeed.date %></td>
-            <td><%= newsfeed.title %></td>
-            <td><%= newsfeed.content %></td>
-            <% if can? :manage, :newsfeed %>
-              <td><%= link_to 'Show', newsfeed %></td>
-              <td><%= link_to 'Edit', edit_newsfeed_path(newsfeed) %></td>
-              <td><%= link_to 'Destroy', newsfeed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            <% end %>
+
+                <td><%= newsfeed.date %></td>
+                <td><a href="newsfeeds/<%= newsfeed.id %>"><%= newsfeed.title %></a></td>
+              <!--<td><%#= newsfeed.content %></td>-->
+
+              <% if can? :manage, :newsfeed %>
+                <td><%= link_to 'Show', newsfeed %>
+                <%= link_to 'Edit', edit_newsfeed_path(newsfeed) %>
+                <%= link_to 'Destroy', newsfeed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+              <% end %>
+        
           </tr>
         <% end %>
       </tbody>

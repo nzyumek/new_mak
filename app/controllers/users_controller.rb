@@ -2,15 +2,15 @@ class UsersController < ApplicationController
   
   def index 
 
-    @users = User.all.page(params[:page]).per(3).order(:id)
+    @users = User.all.page(params[:page]).per(10).order(:id)
     # @search_params = user_search_params
     # @users = User.search(@search_params)
     @gen = User.group(:gen).pluck(:gen).sort
     
     if !params[:gen].blank?
-      @users = User.where(gen: params[:gen]).page(params[:page]).per(3).order(:id)
+      @users = User.where(gen: params[:gen]).page(params[:page]).per(10).order(:id)
     else
-      @users = User.all.page(params[:page]).per(3).order(:id)
+      @users = User.all.page(params[:page]).per(10).order(:id)
     end
     
     # if params[:gen] == "未選択"

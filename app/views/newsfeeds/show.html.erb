@@ -1,21 +1,30 @@
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'newsfeeds' %>
+<% end %>
 <div class="container">
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @newsfeed.title %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @newsfeed.date %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @newsfeed.content %>
-</p>
-
-<%= link_to 'Edit', edit_newsfeed_path(@newsfeed) %> |
-<%= link_to 'Back', newsfeeds_path %>
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8">
+    <p id="notice"><%= notice %></p>
+    
+    <div class="date">
+      <%= @newsfeed.date.strftime("%Y年%m月%d日") %>
+    </div>
+    
+    <div class="title">
+      <%= @newsfeed.title %>
+    </div>
+    
+    
+    
+    <div class="content">
+      <%= @newsfeed.content %>
+    </div>
+    
+    <%= link_to 'Edit', edit_newsfeed_path(@newsfeed) %> |
+    <%= link_to 'Back', newsfeeds_path %>
+    </div>
+    <div class="col-md-2">
+      
+    </div>
+  </div>
 </div>

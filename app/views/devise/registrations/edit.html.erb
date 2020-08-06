@@ -6,50 +6,49 @@
   
   <div class="field">
     <%= f.label "何期生ですか" %>
-    <%= f.text_field :gen, class:"form-control", autofocus: true %>
+    <%= f.text_field :gen, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :lastn %>
-    <%= f.text_field :lastn, class:"form-control", autofocus: true %>
+    <%= f.label "名前" %>
+    <%= f.text_field :lastn, autofocus: true, placeholder: '姓' %><%= f.text_field :firstn, autofocus: true, placeholder: '名'  %>
+  </div>
+  
+  <div class="field">
+    <%= f.label "ひながな" %>
+    <%= f.text_field :h_lastn, autofocus: true, placeholder: 'せい' %><%= f.text_field :h_firstn, autofocus: true, placeholder: 'めい' %>
+  </div>
+  
+  <div class="field">
+    <%= f.label "ユーザーネーム" %>
+    <%= f.text_field :username, autofocus: true %>    
   </div>
   <div class="field">
-    <%= f.label :firstn %>
-    <%= f.text_field :firstn, class:"form-control", autofocus: true %>
+    <%= f.label "学部" %>
+    <%= f.text_field :bachelor, autofocus: true %>
   </div>
   <div class="field">
-    <%= f.label :h_lastn %>
-    <%= f.text_field :h_lastn, class:"form-control", autofocus: true %>
-  </div>
-  <div class="field">
-    <%= f.label :h_firstn %>
-    <%= f.text_field :h_firstn, class:"form-control", autofocus: true %>
-  </div>
-  <div class="field">
-    <%= f.label :username %>
-    <%= f.text_field :username, class:"form-control", autofocus: true %>    
-  </div>
-  <div class="field">
-    <%= f.label :bachelor %>
-    <%= f.text_field :bachelor, class:"form-control", autofocus: true %>
-  </div>
-  <div class="field">
-    <%= f.label :major %>
-    <%= f.text_field :major, class:"form-control", autofocus: true %>
+    <%= f.label "学科" %>
+    <%= f.text_field :major, autofocus: true %>
   </div>
 
   <div class="field">
     <%= f.label "学籍番号" %>
-    <%= f.text_field :studno, class:"form-control", autofocus: true %>
+    <%= f.text_field :studno, autofocus: true %>
   </div>  
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label "メールアドレス" %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
   
   <div class="field">
-    <%= f.label :image %>
+    <%= f.label "LINE ID" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label "プロフィール写真" %>
     <%= f.file_field :image %>
   </div>
 
@@ -58,7 +57,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.label "新しいパスワード" %> <i>(パスワードを変更しない方は空白のままで。)</i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
       <br />
@@ -67,23 +66,23 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label "パスワード再確認" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.label "現在のパスワード"%> <i>(情報を更新した方は現在のパスワードを入力してください。)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "更新" %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
+<!--<h3>Cancel my account</h3>-->
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<!--<p>Unhappy? <%#= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>-->
 
-<%= link_to "Back", :back %>
+<%= link_to "戻る", :back %>
 </div>

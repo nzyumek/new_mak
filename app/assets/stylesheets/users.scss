@@ -17,16 +17,42 @@ h2 {
 
 .user-info {
     border: solid 2px;
+    border-radius: 25px;
 }
 
-.user-info h2 {
+.user-left h2 {
     padding: 10px;
 }
 
-.user-info h3 {
-    padding: 10px;
+.user-left h3 {
+    padding: 10px !important;
+    font-size: 13px !important;
+    font-weight: 400 !important;
 }
 
-.user-menu {
+.user-left {
     border: solid 2px;
+}
+
+// .user-table {
+//     font-size: 62.5% !important;
+//     font-family: 'Kosugi Maru', sans-serif;
+// }
+
+.profile-edit {
+    display: inline-block;
+    border: 2px solid rgb(119, 119, 119);
+    font-size: 1.4rem;
+    padding: 4px 10px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    background-color: rgb(119, 119, 119);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin: 10px;
+    
+    a {
+        color: #fff !important;
+    }
 }

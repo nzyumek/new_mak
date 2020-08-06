@@ -6,6 +6,7 @@ class User < ApplicationRecord
     shibuchou: 11,
     fuku_shibuchou: 12,
     gijutsu_sup: 21,
+    gijutsu_hp: 27,
     gijutsu: 28,
     gijutsu_manager: 29,
     shougai_sup: 31,

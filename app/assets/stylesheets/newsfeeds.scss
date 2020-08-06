@@ -1,7 +1,34 @@
 // Place all the styles related to the newsfeeds controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px !important;
+  line-height: 18px;
+}
 
-table {
-    // text-align: center ;
+h1 {
+    font-size: 30px !important;
+}
+
+h3 {
+    font-size: 13px !important;
+}
+
+.title {
+    font-size: 24px !important;
+    line-height: 1.5;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.content {
+    line-height: 28px;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.date {
+    text-align: right;
+    font-size: 14px;
 }

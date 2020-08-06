@@ -1,5 +1,7 @@
 
-
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'users' %>
+<% end %>
         <div class="container">
           <%= form_tag(users_path, method: "get") do %>
           <%= select_tag(:gen, options_for_select(@gen), :include_blank => "blank") %>
@@ -10,30 +12,35 @@
             <%#= user %>              
           <%# end %>
           <% end %>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">期生</th>
-                  <th scope="col">お名前</th>
-                  <th scope="col">ふりがな　</th>
-                  <% if current_user.admin? || current_user.fuku_kan? %>
-                  <th scope="col">学籍番号</th>
-                  <% end %>
-                  <th scope="col">学部</th>
-                  <th scope="col">学科</th>
-                  <th scope="col">メール</th>
-                  <th scope="col">Role</th>
-                  <% if current_user.admin? || current_user.fuku_kan? %>
-                    <th scope="col">Edit/delete</th>
-                  <% end %>
-                </tr>
-              </thead>
-              <tbody>
+          <div class="user-table">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">期生</th>
+                    <th scope="col">お名前</th>
+                    <th scope="col">ふりがな　</th>
+                    <% if current_user.admin? || current_user.fuku_kan? %>
+                    <th scope="col">学籍番号</th>
+                    <% end %>
+                    <th scope="col">学部</th>
+                    <th scope="col">学科</th>
+                    <th scope="col">メール</th>
+                    <th scope="col">Role</th>
+                    <% if current_user.admin? || current_user.fuku_kan? %>
+                      <th scope="col">Edit/delete</th>
+                    <% end %>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                    <%= render @users %>
                 
-                  <%= render @users %>
-              
-              </tbody>
-            </table>
-            <%= paginate @users %>
+                </tbody>
+              </table>
+              <%= paginate @users %>
+            </div>
+            <%= link_to "戻る", :back %>
         </div>
+        
+        

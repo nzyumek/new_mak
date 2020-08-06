@@ -14,19 +14,24 @@ class Ability
         can :manage, :mak
         can :read, :about
        
-       if user.admin? or user.fuku_kan? or user.fuku_kan_gi? or user.fuku_kan_edi? or user.fuku_kan_sho? or user.fuku_kan_so? or user.fuku_kan_pra?
+       if user.admin? or user.fuku_kan? or user.fuku_kan_gi? or user.fuku_kan_edi? or user.fuku_kan_sho? or user.fuku_kan_so? or user.fuku_kan_pra? or user.gijutsu_hp
          can :manage, :all
        end
        
-       if user.gijutsu? or user.gijutsu_manager? or user.shougai? or user.shougai_manager? or user.accountant? or user.practise? or user.practise_manager? or user.editor? or user.editor_manager? or user.soumu? or user.soumu_manager? or user.shibuchou? or user.fuku_shibuchou? 
-         can :read, [:user, YoutubePost, :member_list]
+       if user.gijutsu_hp? or user.gijutsu?
+        can :manage, :youtube_post
+        can :read, [:user, :youtube_post, :member_list]
+        can :manage, :registration
+       end
+       
+       if user.shougai? or user.shougai_manager? or user.accountant? or user.practise? or user.practise_manager? or user.editor? or user.editor_manager? or user.soumu? or user.soumu_manager? or user.shibuchou? or user.fuku_shibuchou? 
+         can :read, [:user, :youtube_post, :member_list]
          can :manage, :registration
          #can :edit, [:member_list, :youtube, :news, :about, :home, :inquiry, :user, :registration]
        end
        
        if user.member? #:makがモデルないため、コントローラーに設定しないといけませんが、理解できていません。
         can :manage, :registration
-        can :manage, :user
         can :read, :youtube_post
        end
        

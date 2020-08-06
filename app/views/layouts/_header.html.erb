@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #ED743E;">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #FFF;">
         <%= link_to image_tag("logo.png", size: '40x40'), root_path %>
         <button
             class = "navbar-toggler"
@@ -14,20 +14,20 @@
         <div class= "collapse navbar-collapse" id= "navbarSupportedContent">
             <ul class = "navbar-nav ml-auto">
                 <li id="menu-item-444" class="menu-item mr-2">
-                    <%= link_to "About", abouts_path, style: 'color:#FFFFFF;' ,class:"btn btn-outline-secondary" %>
+                    <%= link_to "About", abouts_path, style: 'color:#333333;' ,class:"btn btn-outline-secondary" %>
                 </li>
                 <li id="menu-item-444" class="menu-item mr-2">
-                    <%= link_to "お問い合わせ", inquiry_path , style: 'color:#FFFFFF;' ,class:"btn btn-outline-secondary" %>
+                    <%= link_to "お問い合わせ", inquiry_path , style: 'color:#333333;' ,class:"btn btn-outline-secondary" %>
                 </li>
                 <li id="menu-item-444" class="menu-item mr-2">
-                    <%= link_to "ブログ", "http://makboxnote.blog.fc2.com/", style: 'color:#FFFFFF;' ,class:"btn btn-outline-secondary" %>
+                    <%= link_to "ブログ", "http://makboxnote.blog.fc2.com/", style: 'color:#333333;' ,class:"btn btn-outline-secondary" %>
                 </li>                
                 <li id="menu-item-444" class="menu-item mr-2">
-                    <%= link_to "Twitter","https://twitter.com/meiji_ak", style: 'color:#FFFFFF;' ,class:"btn btn-outline-secondary" %>
+                    <%= link_to "Twitter","https://twitter.com/meiji_ak", style: 'color:#333333;' ,class:"btn btn-outline-secondary" %>
                 </li>
                 <% if !user_signed_in? %>
                 <li id="menu-item-444" class="menu-item mr-2">
-                    <%= link_to "ログイン", new_user_session_path , style: 'color:#FFFFFF;' ,class:"btn btn-outline-secondary" %>
+                    <%= link_to "ログイン", new_user_session_path , style: 'color:#333333;' ,class:"btn btn-outline-secondary" %>
                 </li>
                 <%  elsif user_signed_in?  %>
                         <div class="dropdown show mr-2">
