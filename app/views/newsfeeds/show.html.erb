@@ -19,9 +19,10 @@
     <div class="content">
       <%= @newsfeed.content %>
     </div>
-    
+    <% if can? :manage, :newsfeed %>
     <%= link_to 'Edit', edit_newsfeed_path(@newsfeed) %> |
     <%= link_to 'Back', newsfeeds_path %>
+    <% end %>
     </div>
     <div class="col-md-2">
       

@@ -24,7 +24,7 @@
                     <h3><%= @user.bachelor %>学部</h3>
                     <h3><%= @user.major %>学科</h3>
                     <h3>        
-            <% if @user.general? %>
+            <% if @user.confirmable? %>
                承認待ち
             <% elsif @user.member? %>
                 一般会員

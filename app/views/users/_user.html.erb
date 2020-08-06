@@ -30,10 +30,12 @@
             <%= user.email %>
         </td>
         <td>
-            <% if user.general? %>
+            <% if user.confirmable? %>
                承認待ち
             <% elsif user.member? %>
                 一般会員
+            <% elsif user.obr? %>
+                OB
             <% elsif user.shibuchou? %>
             支部長
             <% elsif user.fuku_shibuchou? %>

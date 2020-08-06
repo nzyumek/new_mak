@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_31_044942) do
+ActiveRecord::Schema.define(version: 2020_08_06_074857) do
 
   create_table "abouts", force: :cascade do |t|
     t.text "lunch"
@@ -100,6 +100,7 @@ ActiveRecord::Schema.define(version: 2020_07_31_044942) do
     t.integer "studno"
     t.integer "role", default: 1, null: false
     t.string "image"
+    t.string "line_id"
     t.index ["bachelor"], name: "index_users_on_bachelor"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true

@@ -21,6 +21,7 @@ class InquiryController < ApplicationController
   def thanks
     # メール送信
     @inquiry = Inquiry.new(inquiry_params)
+    @user = User.find_by(role: 'shibuchou')
     InquiryMailer.received_email(@inquiry).deliver
  
     # 完了画面を表示

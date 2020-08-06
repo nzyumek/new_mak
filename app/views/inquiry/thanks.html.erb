@@ -1,8 +1,14 @@
 <% provide(:title, "Inquiry") %>
-<div class="page-header">
-  <h1>お問い合わせ</h1>
+<div class= "container">
+  <div class="page-header">
+    <h1>お問い合わせ</h1>
+  </div>
+  <p>
+    お問い合わせいただきありがとうございました。
+  </p>
+  
+  <% if @inquiry.select == "入会希望" %>
+    <%= @user.line_id %>
+    shibuchou
+  <% end %>
 </div>
-<p>
-  お問い合わせいただきありがとうございました。
-</p>
-

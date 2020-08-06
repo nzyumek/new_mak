@@ -1,8 +1,9 @@
 class User < ApplicationRecord
   enum role: { 
     general: 1, 
-    ob: 2,
-    member: 3,
+    confirmable: 2,
+    ob: 3,
+    member: 4,
     shibuchou: 11,
     fuku_shibuchou: 12,
     gijutsu_sup: 21,

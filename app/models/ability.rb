@@ -14,11 +14,11 @@ class Ability
         can :manage, :mak
         can :read, :about
        
-       if user.admin? or user.fuku_kan? or user.fuku_kan_gi? or user.fuku_kan_edi? or user.fuku_kan_sho? or user.fuku_kan_so? or user.fuku_kan_pra? or user.gijutsu_hp
+       if user.admin? or user.fuku_kan? or user.fuku_kan_gi? or user.fuku_kan_edi? or user.fuku_kan_sho? or user.fuku_kan_so? or user.fuku_kan_pra? or user.gijutsu_hp?
          can :manage, :all
        end
        
-       if user.gijutsu_hp? or user.gijutsu?
+       if user.gijutsu?
         can :manage, :youtube_post
         can :read, [:user, :youtube_post, :member_list]
         can :manage, :registration
@@ -30,19 +30,16 @@ class Ability
          #can :edit, [:member_list, :youtube, :news, :about, :home, :inquiry, :user, :registration]
        end
        
-       if user.member? #:makがモデルないため、コントローラーに設定しないといけませんが、理解できていません。
+       if user.member? or user.ob? #:makがモデルないため、コントローラーに設定しないといけませんが、理解できていません。
         can :manage, :registration
-        can :read, :youtube_post
+        can :read, [:youtube_post, :user]
        end
        
        #if authenticate_admin!
        # can :manage, :all
        #end
        
-       if user.ob?
-         can :read, :youtube
-         can :manage, :registration
-       end
+
 
         # can :manage, :all
       # end
