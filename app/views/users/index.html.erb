@@ -5,6 +5,7 @@
         <div class="container">
           <%= form_tag(users_path, method: "get") do %>
           <%= select_tag(:gen, options_for_select(@gen), :include_blank => "blank") %>
+          <%= select_tag(:bachelor, options_for_select(@bachelor), :include_blank => "blank") %>
           <%#= collection_select(:gen, @gen, :id, :name, selected: @search_params[:gen], include_blank: t('helpers.select.include_blank')) %>
           <%= submit_tag "絞り込み" %>
 

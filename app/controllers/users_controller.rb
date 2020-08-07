@@ -6,9 +6,12 @@ class UsersController < ApplicationController
     # @search_params = user_search_params
     # @users = User.search(@search_params)
     @gen = User.group(:gen).pluck(:gen).sort
+    @bachelor = User.group(:bachelor).pluck(:bachelor).sort
     
-    if !params[:gen].blank?
-      @users = User.where(gen: params[:gen]).page(params[:page]).per(10).order(:id)
+    if !params[:gen].blank? #|| !params[:bachelor].blank?
+      @users = User.where(gen: params[:gen]).page(params[:page]).per(10).order(:id) 
+    elsif !params[:bachelor].blank?
+      @users = User.where(bachelor: params[:bachelor]).page(params[:page]).per(10).order(:id)
     else
       @users = User.all.page(params[:page]).per(10).order(:id)
     end
@@ -21,8 +24,9 @@ class UsersController < ApplicationController
   end
   
   def search
-      @users = User.where('gen LIKE ?', "%#{params[:gen]}%")
+      @users = User.where('gen LIKE ? AND bachelor LIKE ?', "%#{params[:gen]}%", "%#{params[:bachelor]}%")
       @gen = User.group(:gen).pluck(:gen).sort　#ここを追加！
+      @bachelor = User.group(:bachelor).pluck(:bachelor).sort
       render :index
 
   end
