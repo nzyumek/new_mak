@@ -84,3 +84,6 @@ gem 'actiontext'
 
 gem 'kaminari', '~> 0.17.0'
 gem 'kaminari-bootstrap', '~> 3.0.1'
+
+gem 'bootstrap', '~> 4.1.1'
+gem 'jquery-rails'

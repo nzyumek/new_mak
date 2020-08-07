@@ -6,5 +6,20 @@ h1 {
 }
 
 .container {
-    height: calc(100% - 60px);
+    height: calc(100vh - 110px);
+}
+
+@media (max-width: 375px) {
+    
+    th {
+        font-size: 1.5rem !important;
+    }
+    
+    td {
+        font-size: 8.5px !important;
+    }
+    
+    h1 {
+        font-size: 2.3rem !important;
+    }
 }

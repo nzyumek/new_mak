@@ -1,4 +1,9 @@
+<% provide(:title, "Youtube") %>
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'youtube_posts' %>
+<% end %>
 <div class="container">
+  <div class="playlist">
   <p id="notice"><%= notice %></p>
   
   <h1>Youtube Posts</h1>
@@ -6,26 +11,32 @@
   <table>
     <thead>
       <tr>
-        <th>Title</th>
-        <th colspan="3"></th>
+        <th class=""></th>
+        
       </tr>
     </thead>
   
     <tbody>
       <% @youtube_posts.each do |youtube_post| %>
         <tr>
-          <td><%= youtube_post.title %></td>
-          <td><%= raw youtube_post.content.to_plain_text %></td>
-          <td><%= link_to 'Edit', edit_youtube_post_path(youtube_post) %></td>
-          <td><%= link_to 'Destroy', youtube_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= youtube_post.title %>
+          <div class="videoWrapper"><%= raw youtube_post.content.to_plain_text %></div>
+          <%= link_to 'Edit', edit_youtube_post_path(youtube_post) %>
+          <%= link_to 'Destroy', youtube_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
   
   <br>
-  <% if current_user.admin? %> 
+  <% if current_user.admin? || current_user.gijutsu? || current_user.gijutsu_manager? %> 
     <%= link_to 'New Youtube Post', new_youtube_post_path %>
   <% end %>
   <%= link_to "戻る", :back %>
+  </div>
+
+
+<div class="videoWrapper">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/5qap5aO4i9A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 </div>

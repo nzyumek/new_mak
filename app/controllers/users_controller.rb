@@ -8,19 +8,17 @@ class UsersController < ApplicationController
     @gen = User.group(:gen).pluck(:gen).sort
     @bachelor = User.group(:bachelor).pluck(:bachelor).sort
     
-    if !params[:gen].blank? #|| !params[:bachelor].blank?
+    if !params[:gen].blank? && !params[:bachelor].blank?
+      @users = User.where('gen LIKE ? AND bachelor LIKE ?', "%#{params[:gen]}%", "%#{params[:bachelor]}%").page(params[:page]).per(10).order(:id)
+    elsif !params[:gen].blank? && params[:bachelor].blank?
       @users = User.where(gen: params[:gen]).page(params[:page]).per(10).order(:id) 
-    elsif !params[:bachelor].blank?
+    elsif !params[:bachelor].blank? && params[:gen].blank?
       @users = User.where(bachelor: params[:bachelor]).page(params[:page]).per(10).order(:id)
     else
       @users = User.all.page(params[:page]).per(10).order(:id)
     end
     
-    # if params[:gen] == "未選択"
-    #   @users = User.all
-    # else
-    #   @users = User.where(gen: params[:gen])
-    # end  
+
   end
   
   def search
@@ -28,7 +26,6 @@ class UsersController < ApplicationController
       @gen = User.group(:gen).pluck(:gen).sort　#ここを追加！
       @bachelor = User.group(:bachelor).pluck(:bachelor).sort
       render :index
-
   end
   
   def show

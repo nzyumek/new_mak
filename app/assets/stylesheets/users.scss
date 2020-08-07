@@ -32,6 +32,7 @@ h2 {
 
 .user-left {
     border: solid 2px;
+    text-align: center;
 }
 
 // .user-table {
@@ -54,5 +55,35 @@ h2 {
     
     a {
         color: #fff !important;
+    }
+}
+
+.check {
+    cursor: pointer !important;
+    display: inline-block !important;
+    margin: 0px !important;
+    position: relative !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    width: auto !important;
+    touch-action: manipulation !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: normal !important;
+    color: rgb(72, 72, 72) !important;
+    padding: 10px 22px !important;
+    font-weight: 800 !important;
+    border-radius: 4px !important;
+    border-width: 2px !important;
+    border-style: solid !important;
+    border-color: rgb(72, 72, 72) !important;
+    background: transparent none repeat scroll 0% 0% !important;
+    box-shadow: none !important;
+    min-width: 71.1935px !important;
+}
+
+@media(max-width: 375px) {
+    .user-left {
+        margin: 0 10px 10px 10px;
     }
 }

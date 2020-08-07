@@ -18,3 +18,18 @@ td {
 .job_type_label {
     font-weight: 400 !important;
 }
+
+@media (max-width: 375px) {
+    
+    th {
+        font-size: 10px !important;
+    }
+    
+    main {
+        padding-top: 0 !important;
+    }
+    
+    nav {
+        margin-bottom: 0 !important;
+    }
+}

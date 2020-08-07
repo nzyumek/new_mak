@@ -1,0 +1,30 @@
+// Place all the styles related to the User controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {
+    margin: 0;
+    font-family: 'メイリオ',
+        'Hiragino Kaku Gothic Pro',
+        sans-serif !important;
+    font-size: 15px !important;
+    padding: 0;
+}
+
+h2 {
+    font-style: bold !important;
+}
+
+.table-fixed th:first-child, td:first-child {
+  position: sticky;  position: -webkit-sticky;
+  left: 0;
+}
+.table-fixed tr:nth-of-type(odd) th:first-child {
+  background-color: #eee;
+}
+.table-fixed tr:nth-of-type(odd) td:first-child {
+  background-color: #eee;
+}
+.table-fixed tr:nth-of-type(even) td:first-child {
+  background-color: #fff;
+}

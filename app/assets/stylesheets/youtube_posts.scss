@@ -1,3 +1,42 @@
 // Place all the styles related to the youtube_posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+@media(max-width: 375px) {
+  .playlist {
+    width: 90vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+    
+}
+
+@media(max-width: 800px) {
+  .playlist td {
+    width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+  .playlist td {
+    width: 600px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    width: 100%;
+    height: auto;
+  }
+  
+  .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }

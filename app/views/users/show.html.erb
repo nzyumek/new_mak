@@ -3,10 +3,15 @@
 <% end %>
 <div class="container">
     <section class="greeting">
-        <h1>お帰りなさい。<%= @user.lastn %><%= @user.firstn %></h1>
+        <% if current_user.general? %>
+          <h1>ただいま承認待ちです。</h1>
+        <% else %>
+            <h1>お帰りなさい。<%= @user.lastn %><%= @user.firstn %></h1>
+        <% end %>  
     </section>
     <section class="user-table">
         <div class="row">
+
             <div class="user-left col-md-4">
                 <div class="container">
                 
@@ -88,20 +93,22 @@
     
         <div class="user-right col-md-offset-1 col-md-7">
             <div class="user-menu">
-                <% if can? :read, :member_list %>
-                    <%= link_to "ユーザー一覧", users_path %>
-                <% end %>
-                <% if can? :read, :user %>
-                  <h1>You can read member</h1>
-                <% end %>
-                <div class="youtube">
-                     <%= link_to "歴代番発", youtube_posts_path %>
-                     <%= link_to image_tag("logo.png", size: '40x40'), "https://drive.google.com/drive/folders/17q0nL9AaP6jpS_UNcPf2YnFBY3aBmaNN?usp=sharing" %>
-                     <%#= link_to "機材一覧", youtubes_path %>
+                <div class="row">
+                    <div class="col-xs-6">
+                    <% if can? :read, :member_list %>
+                        <%= link_to "ユーザー一覧", users_path, class:"check"  %>
+                    <% end %>
+                    </div>
+                    <div class="youtube col-xs-6">
+                         <%= link_to "歴代番発", youtube_posts_path , class:"check" %>
+                         <%#= link_to image_tag("logo.png", size: '40x40'), "https://drive.google.com/drive/folders/17q0nL9AaP6jpS_UNcPf2YnFBY3aBmaNN?usp=sharing" %>
+                         <%#= link_to "機材一覧", youtubes_path %>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
     </div>
+
+    </section>
 </div>
 

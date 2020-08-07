@@ -35,6 +35,7 @@ class Ability
         can :read, [:youtube_post, :user]
        end
        
+       
        #if authenticate_admin!
        # can :manage, :all
        #end

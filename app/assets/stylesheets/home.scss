@@ -307,57 +307,57 @@ body {
     font-size: 16px ;
 }
 
-@media (min-width: 768px) {
+// @media (min-width: 768px) {
     
-    .conA h1 {
-        font-size: 50px;
-    }
+//     .conA h1 {
+//         font-size: 50px;
+//     }
     
-    .conA p {
-        font-size: 24px;
-    }
+//     .conA p {
+//         font-size: 24px;
+//     }
 
-    .conB {
-        // background-color: #444444;
-        // color: #fff;
-        // color: var(--text-bright-color);
-        width: 100%;
-        padding: 20px 20px;
-        height: 800px;
+//     .conB {
+//         // background-color: #444444;
+//         // color: #fff;
+//         // color: var(--text-bright-color);
+//         width: 100%;
+//         padding: 20px 20px;
+//         height: 800px;
     
-    }
+//     }
 
-    .conC {
-        padding-bottom: 10px;
-        height: 100vh ;
-    }
+//     .conC {
+//         padding-bottom: 10px;
+//         height: 100vh ;
+//     }
     
-    .conD {
-        padding: 10px 0px;
-        height: calc(100vh - 80px);
-    }    
+//     .conD {
+//         padding: 10px 0px;
+//         height: calc(100vh - 80px);
+//     }    
     
-    .conC .container {
-        display: flex;
+//     .conC .container {
+//         display: flex;
 
-    }
+//     }
     
-    .conC .image {
-        flex: 3;
-    }
+//     .conC .image {
+//         flex: 3;
+//     }
     
-    .conC .text {
-        flex: 2;
-        padding: 50px;
-    }
+//     .conC .text {
+//         flex: 2;
+//         padding: 50px;
+//     }
     
-    .interview-image {
-        width: 516px;
-        height: 516px;
-    }
-}
+//     .interview-image {
+//         width: 516px;
+//         height: 516px;
+//     }
+// }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .interview-image {
         width: 100vw;
         height: 100vh;
@@ -402,12 +402,13 @@ body {
 
     .conC {
         padding-bottom: 10px;
-        height: 100vh ;
+        height: calc(100vh - 110px) ;
     }
     
     .conD {
         padding: 10px 0px;
-        height: 700px;
+        height: calc(100vh - 110px);
     }    
 
 }
+
