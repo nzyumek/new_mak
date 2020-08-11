@@ -57,10 +57,10 @@
       <ul class="list-group list-group-flush">
         <% @newsfeeds.each do |newsfeed| %>
         <a href="newsfeeds/<%= newsfeed.id %>">
-        <li class="list-group-item"><%= newsfeed.date.strftime("%Y年%m月%d日") %> &nbsp;  <%= newsfeed.title %></li>
+        <li class="list-group-item borderless"><%= newsfeed.date.strftime("%Y年%m月%d日") %> &nbsp;  <%= newsfeed.title %></li>
          <!--<li class="list-group-item"><%#= newsfeed.date.strftime("%Y年%m月%d日") %>  <%#= newsfeed.title %>  <%#= newsfeed.content %></li>-->
         <% end %>
-        <li class="list-group-item"><%= link_to '更新情報一覧', newsfeeds_path, class: "check"%></li></a>
+        <li class="list-group-item borderless"><%= link_to '更新情報一覧', newsfeeds_path, class: "check"%></li></a>
       </ul>
     </div>
   </div>

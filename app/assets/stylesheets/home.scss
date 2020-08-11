@@ -36,6 +36,8 @@ body {
     box-sizing: border-box;
     text-align: center;
     margin-bottom: 24px;
+    margin-right: auto;
+    margin-left: auto;    
 }
 
 .list-group-item {
@@ -255,8 +257,8 @@ body {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 30px;
-    border: solid 3px currentColor;
-    border-radius: 6px;
+    // border: solid 3px currentColor;
+    // border-radius: 6px;
     background: #BF6A7A;
     background-color: var(--accent-color);
     color: #fff;
@@ -267,6 +269,10 @@ body {
 
 .conC .newslink:hover {
     text-decoration: underline;
+}
+
+.conC li.borderless {
+  border-top: 0 none;
 }
 
 .conC .icon{
