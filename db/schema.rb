@@ -12,17 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2020_08_06_074857) do
 
-  create_table "abouts", force: :cascade do |t|
-    t.text "lunch"
-    t.text "regular"
-    t.text "event"
-    t.text "camp"
-    t.string "room"
-    t.text "homeinfo"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"

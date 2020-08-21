@@ -27,7 +27,7 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col"><%= sort_link(@q, :gen, "期生") %></th>
+                    <th scope="col"><%= sort_link(@q, :gen) %></th>›
                     <th scope="col">お名前<%#= sort_link(@q, :lastn, "お名前") %></th>
                     <th scope="col">ふりがな　</th>
                     <% if current_user.admin? || current_user.fuku_kan? || current_user.gijutsu_hp? %>
