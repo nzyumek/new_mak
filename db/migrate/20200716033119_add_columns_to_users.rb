@@ -11,8 +11,5 @@ class AddColumnsToUsers < ActiveRecord::Migration[6.0]
     add_column :users, :studno, :integer
     add_column :users, :role, :integer
   end
-  add_index :users, :bachelor
-  add_index :users, :major
-  add_index :users, :gen
-  add_index :users, :role
+
 end
