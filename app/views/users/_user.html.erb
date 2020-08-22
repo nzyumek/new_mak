@@ -87,7 +87,7 @@
             <% end %>
         </td>
         <td>
-            <% if current_user.admin? || current_user.fuku_kan? %>
+            <% if current_user.admin? || current_user.fuku_kan? || current_user.kanjichou? %>
                 <%= link_to "Edit", edit_user_path(user.id) %>
             <% end %>
         </td>        

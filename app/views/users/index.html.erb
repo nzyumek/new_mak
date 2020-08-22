@@ -3,19 +3,21 @@
   <%= stylesheet_link_tag 'user_index' %>
 <% end %>
         <div class="container">
-          <%#= form_tag(users_path, method: "get") do %>
-          <%#= select_tag(:gen, options_for_select(@gen), :include_blank => "blank") %>
-          <%#= select_tag(:bachelor, options_for_select(@bachelor), :include_blank => "blank") %>
+          <%= form_tag(users_path, method: "get") do %>
+          <%= select_tag(:gen, options_for_select(@gen), :include_blank => "blank") %>
+          <%= select_tag(:bachelor, options_for_select(@bachelor), :include_blank => "blank") %>
           
-          <%#= submit_tag "絞り込み" %>
-          <%# end %>
-          
-          <%= search_form_for @q do |f| %>
-            <%= f.label :bachelor, "Keyword" %>
-            <%= f.search_field :bachelor_cont %>
-          
-            <%= f.submit "検索" %>
+          <%= submit_tag "絞り込み" %>
+          <%= link_to 'Clear', users_path %>
           <% end %>
+          
+          
+          <%#= search_form_for @q do |f| %>
+            <%#= f.label :gen, "gen" %>
+            <%#= f.search_field :gen_cont %>
+          
+            <%#= f.submit "検索" %>
+          <%# end %>
 
           <%# @users.each do |user| %>
             <%#= user %>              
@@ -27,7 +29,7 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col"><%= sort_link(@q, :gen) %></th>›
+                    <th scope="col"><%= sort_link(@q, :gen) %></th>
                     <th scope="col">お名前<%#= sort_link(@q, :lastn, "お名前") %></th>
                     <th scope="col">ふりがな　</th>
                     <% if current_user.admin? || current_user.fuku_kan? || current_user.gijutsu_hp? %>

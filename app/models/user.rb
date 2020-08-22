@@ -13,7 +13,7 @@ class User < ApplicationRecord
     shougai_sup: 31,
     shougai: 38,
     shougai_manager: 39,
-    accountant: 90,
+    accountant: 70,
     practise: 41,
     practise_manager: 42,
     editor: 51,
