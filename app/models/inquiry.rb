@@ -1,6 +1,6 @@
 class Inquiry < ApplicationRecord
     include ActiveModel::Model
-    enum select: {入会希望: 1, 質問・相談: 2, 仕事依頼: 3, その他: 4}
+    enum select: {仮入会希望: 1, 質問・相談: 2, 仕事依頼: 3, その他: 4}
     
   attr_accessor :name, :email, :message, :select
   

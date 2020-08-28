@@ -17,8 +17,9 @@
       <th>
         <span class="job_type_engine">ご用件</span><br>
         <div class="radio-inline">
-          <%= f.radio_button :select, :入会希望, checked: "checked" %>
-          <%= f.label :入会希望, class: "job_type_label" %>
+          <%= f.radio_button :select, :仮入会希望, checked: "checked" %>
+          <%= f.label :仮入会希望, class: "job_type_label" %>
+          <a href="/newsfeeds">仮入会とは？</a>
         </div>
         <div class="radio-inline">
           <%= f.radio_button :select, :質問・相談 %>

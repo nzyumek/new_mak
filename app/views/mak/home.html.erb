@@ -6,7 +6,6 @@
     <div class="bgImg src1"></div>
     <div class="bgImg src2"></div>
     <div class="bgImg src3"></div>
-    <div class="bgImg src"></div>
     <div class="logoh">
       <%= image_tag 'logo.png', class: 'logo' %>
       <h1>明治大学</h1><h1>アナウンス研究会</h1>
@@ -32,12 +31,12 @@
         <div class="row">
             <div class="col-md-6">
                 <i class="fas fa-quote-left"></i>
-                <div class="quotation">aaaaaaaaaaa</div>
-                <p>Dennisさんはロンドンのホスト。自由度の高さに魅力を感じていますa</p>
+                <div class="quotation">50年の歴史、確かなメソッド</div>
+                <p>木守健爾はアナウンス研究会50期の幹事長。半世紀続いた明治大学アナウンス研究会。だからこそ、我々にしか為せないことがあります。まずは一歩踏み出す勇気を。</p>
                 <%= link_to '活動内容', abouts_path, class:"check" %>
             </div>
             <div class="col-md-6">
-                <%= image_tag 'yume_dj.jpg', class: "img-responsive center-block" %>
+                <%= image_tag 'kimori.jpg', class: "img-responsive center-block" %>
             </div>            
         </div>          
   </div>  
@@ -67,15 +66,15 @@
 </section>
 
 
-<section class="conD">
+<section class="conD" id="contactArea">
   <div class="container">
-    <div class="line">
+    <!--<div class="line">-->
             
-    </div>     
+    <!--</div>     -->
     <div class="text">
         <div class="page-header">
           <h2>お問い合わせ</h2>
-          <p>返信は数日...</p>
+          <p class="inquiry-p">内容により返信に数日かかる場合がございます。予めご了承ください</p>
         </div>
       <%= render 'inquiry/form', post: @inquiry %>
     </div>

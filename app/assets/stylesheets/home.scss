@@ -118,7 +118,7 @@ body {
     bottom     : 0;
     right      : 0;
     opacity    : 0;
-    animation  : bgAnime 24s infinite;   /* 4画像 × 各6s = 24s */
+    animation  : bgAnime 18s infinite;   /* 4画像 × 各6s = 24s */
 }
 
 /* --- 段差で背景画像のアニメーションを実行 ----------------- */
@@ -142,13 +142,13 @@ body {
     background-size: cover;
     animation-delay  : 12s;
 }
-.conA .src4 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), image-url('mic.jpg');   /* 背景の画像を指定 */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    animation-delay  : 18s;
-}
+// .conA .src4 {
+//     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), image-url('mic.jpg');   /* 背景の画像を指定 */
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-size: cover;
+//     animation-delay  : 18s;
+// }
 
 @keyframes bgAnime {
     0% { opacity: 0; }
@@ -174,7 +174,7 @@ body {
     margin-top: 0;
     margin-bottom: 10px;
     font-family: 'Kosugi Maru', sans-serif;
-    font-size: 3vw;
+    font-size: 3vw !important;
     letter-spacing: 0.1em;
     margin-left: 0.2em;
 }
@@ -182,8 +182,10 @@ body {
 .conA .banner-text{
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 18px;
+    font-size: 25px !important;
     color: #FFF !important;
+    border: 2px solid;
+    font-weight: 600 !important;
 }
 
 .logo {
