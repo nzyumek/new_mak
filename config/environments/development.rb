@@ -73,6 +73,16 @@ Rails.application.configure do
    enable_starttls_auto:  true
   }
   
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address => "smtp.gmail.com",
+    :port => 587,
+    :domain => 'smtp.gmail.com',
+    :user_name => "meijimaktest@gmail.com", #gmailアドレス
+    :password => "hrswansfzbatziwn", #gmailパスワード
+    :authentication => 'login',
+  }
+  
   # mailer setting
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # config.action_mailer.default_url_options = { host: 'localhost:3000' }  

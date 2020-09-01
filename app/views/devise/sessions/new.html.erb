@@ -7,9 +7,10 @@
   <%= image_tag "logo.png" , :size => '72x72' %>
   <h1 class="h3 mb-3 font-weight-normal">ログイン</h1>
   
+
   <div class="field">
-    <%= f.label :email, class: "sr-only" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "メールアドレス" %>
+    <%= f.label :login, class: "sr-only" %><br />
+    <%= f.text_field :login, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "メールアドレス" %>
   </div>
 
   <div class="field">

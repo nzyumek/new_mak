@@ -18,6 +18,8 @@ class ApplicationController < ActionController::Base
         added_attrs = [ :gen, :lastn, :firstn, :h_lastn, :h_firstn, :bachelor, :major, :studno, :username, :email, :role, :image, :line_id]
         # サインアップ時にnameのストロングパラメータを追加
         devise_parameter_sanitizer.permit(:sign_up, keys: added_attrs)
+        
+        devise_parameter_sanitizer.permit(:login, keys: [:username, :email, :password, :remember_me])
         # アカウント編集の時にnameとprofileのストロングパラメータを追加
         devise_parameter_sanitizer.permit(:account_update, keys: added_attrs)
         #devise_parameter_sanitizer.permit(:sign_ip, keys: [:login, :username, :email, :password, :remember_me]) 
