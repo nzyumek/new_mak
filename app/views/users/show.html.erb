@@ -94,16 +94,17 @@
         <div class="user-right col-md-offset-1 col-md-7">
             <div class="user-menu">
                 <div class="row">
-                    <div class="col-xs-6">
-                    <% if can? :read, :member_list %>
-                        <%= link_to "ユーザー一覧", users_path, class:"check"  %>
-                    <% end %>
-                    </div>
+
                     <div class="youtube col-xs-6">
                          <%= link_to "歴代番発", youtube_posts_path , class:"check" %>
                          <%#= link_to image_tag("logo.png", size: '40x40'), "https://drive.google.com/drive/folders/17q0nL9AaP6jpS_UNcPf2YnFBY3aBmaNN?usp=sharing" %>
                          <%#= link_to "機材一覧", youtubes_path %>
                     </div>
+                    <div class="col-xs-6">
+                    <% if can? :read, :member_list %>
+                        <%= link_to "ユーザー一覧", users_path, class:"check"  %>
+                    <% end %>
+                    </div>                    
                 </div>
                 <div class="row">
                     <div class=" col-xs-6">
