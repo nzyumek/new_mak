@@ -7,8 +7,9 @@
     お問い合わせいただきありがとうございました。
   </p>
   
-  <% if @inquiry.select == "入会希望" %>
+  <% if @inquiry.select == "仮入会希望" %>
     <%#= @user.line_id %>
     shibuchou
+    <%= image_tag 'ayumi.jpg', class: "img-responsive center-block", :width => "260", :height => "auto" %>
   <% end %>
 </div>

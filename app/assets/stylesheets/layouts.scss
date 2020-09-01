@@ -133,3 +133,9 @@ body {
 header {
   height: 80px;
 }
+
+.custom-select {
+  width: 20% !important;
+  height: calc(1.5em + .75rem + 10px) !important;
+  font-size: 1.4rem !important;
+}

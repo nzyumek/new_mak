@@ -18,7 +18,10 @@
     
     <div class="content">
       <%= @newsfeed.content %>
+      <%= image_tag @newsfeed.image.variant(resize_to_fill:[800,600]).processed, class:'img-fluid' if @newsfeed.image.attached? %>
     </div>
+    
+    
     <% if can? :manage, :newsfeed %>
     <%= link_to 'Edit', edit_newsfeed_path(@newsfeed) %> |
     <%= link_to 'Back', newsfeeds_path %>

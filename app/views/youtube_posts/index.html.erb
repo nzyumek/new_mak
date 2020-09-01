@@ -27,7 +27,7 @@
       <% end %>
     </tbody>
   </table>
-  
+  <%= paginate @youtube_posts %>
   <br>
   <% if current_user.admin? || current_user.gijutsu? || current_user.gijutsu_manager? %> 
     <%= link_to 'New Youtube Post', new_youtube_post_path %>

@@ -41,14 +41,24 @@
                     <%= link_to "Twitter","https://twitter.com/meiji_ak", style: 'color:#333333;' ,class:"btn btn-outline-secondary" %>
                 </li>
                 <% if !user_signed_in? %>
-                <li id="menu-item-444" class="menu-item mr-2">
-                    <%= link_to "ログイン", new_user_session_path , style: 'color:#333333;' ,class:"btn btn-outline-secondary" %>
-                </li>
+                    <li id="menu-item-444" class="menu-item mr-2">
+                        <%= link_to "ログイン", new_user_session_path , style: 'color:#333333;' ,class:"btn btn-outline-secondary" %>
+                    </li>
                 <%  elsif user_signed_in?  %>
-                        <li class="nav-item menu-item dropdown" id="menu-item-444">
-                          <a class="btn btn-outline-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            メンバー
-                          </a>
+                    <li id="menu-item-444" class="menu-item mr-2">
+                                <% if current_user.confirmable? %>
+                                    承認待ち
+                                <% else %>
+                                    <%= link_to "マイページ", user_path(:id), style: 'color:#333333;' ,class:"btn btn-outline-secondary" %>
+                                <% end %>
+                    </li>
+                    <!--<li id="menu-item-444" class="menu-item mr-2">-->
+                    <!--    <%#= link_to "ログアウト", destroy_user_session_path, method: :delete , style: 'color:#333333;' ,class:"btn btn-outline-secondary"%>-->
+                    <!--</li>                    -->
+                        <!--<li class="nav-item menu-item dropdown" id="menu-item-444">-->
+                        <!--  <a class="btn btn-outline-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                        <!--    メンバー-->
+                        <!--  </a>-->
                         
                           <!--<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">-->
                           <!--  <a class="dropdown-item" href="#">Action</a>-->
@@ -57,20 +67,20 @@
                           <!--  <a class="dropdown-item" href="#">Something else here</a>-->
                           <!--</div>-->
                         
-                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-item">
-                                <% if current_user.confirmable? %>
-                                    承認待ち
-                                <% else %>
-                                <%= link_to "マイページ", user_path(:id), class:"text-dark" %>
-                                <% end %>
-                            </div>
-                            <div class="dropdown-divider"></div>
-                            <div class="dropdown-item">
-                                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"text-dark" %>
-                            </div>
-                          </div>
-                        </li>
+                        <!--  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">-->
+                        <!--    <div class="dropdown-item">-->
+                        <!--        <%# if current_user.confirmable? %>-->
+                        <!--            承認待ち-->
+                        <!--        <%# else %>-->
+                        <!--            <%#= link_to "マイページ", user_path(:id), class:"text-dark" %>-->
+                        <!--        <%# end %>-->
+                        <!--    </div>-->
+                        <!--    <div class="dropdown-divider"></div>-->
+                        <!--    <div class="dropdown-item">-->
+                        <!--        <%#= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"text-dark" %>-->
+                        <!--    </div>-->
+                        <!--  </div>-->
+                        <!--</li>-->
                 <% end %>
 			</ul>
 		</div>

@@ -4,7 +4,9 @@
 body {
     margin: 0;
     padding: 0;
+    
 }
+
 
 // h2 {
 //     margin-top: 30px !important;
@@ -309,7 +311,9 @@ body {
 
 /* conD*/
 
-
+.contact-container {
+    height: calc( 100vh - 40px );
+}
 
 .conD .text {
     font-size: 16px ;

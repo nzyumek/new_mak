@@ -69,6 +69,6 @@ class NewsfeedsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def newsfeed_params
-      params.require(:newsfeed).permit(:title, :date, :content)
+      params.require(:newsfeed).permit(:title, :date, :content, :image)
     end
 end

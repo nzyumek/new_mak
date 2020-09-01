@@ -25,6 +25,10 @@
     <%= form.label :content %>
     <%= form.text_area :content %>
   </div>
+  
+  <div class="field">
+    <%= form.file_field :image, accept: "image/png, image/jpeg, image/gif"%>
+  </div>
 
   <div class="actions">
     <%= form.submit %>

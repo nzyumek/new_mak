@@ -4,7 +4,7 @@ class YoutubePostsController < ApplicationController
   # GET /youtube_posts
   # GET /youtube_posts.json
   def index
-    @youtube_posts = YoutubePost.all
+    @youtube_posts = YoutubePost.all.page(params[:page]).per(10).order(:id)
   end
 
   # GET /youtube_posts/1

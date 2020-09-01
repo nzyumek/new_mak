@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>Sign up</h2>
+  <h2>会員登録</h2>
   
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
@@ -19,17 +19,16 @@
     <%= f.text_field :h_lastn, autofocus: true, placeholder: 'せい' %><%= f.text_field :h_firstn, autofocus: true, placeholder: 'めい' %>
   </div>
   
+  <!--<div class="field">-->
+  <!--  <%#= f.label "ログインネーム" %>(ログイン用・英数のみ)-->
+  <!--  <%#= f.text_field :username, autofocus: true %>    -->
+  <!--</div>-->
   <div class="field">
-    <%= f.label "ログインネーム" %>(ログイン用・英数のみ)
-    <%= f.text_field :username, autofocus: true %>    
+    <%= f.label "学部学科" %>
+    <%#= f.text_field :bachelor, autofocus: true %>
+    <%= f.select :bachelor,  [['法学部', '法学部'], ['商学部', '商学部'], ['政治経済学部', '政治経済学部'], ['文学部', '文学部'], ['理工学部', '理工学部'] , ['農学部', '農学部'] , ['経営学部', '経営学部'] , ['情報コミュニケーション学部', '情報コミュニケーション学部'] , ['国際日本学部', '国際日本学部'] , ['総合数理学部', '総合数理学部']  ] , {}, {class: "custom-select "} %>
   </div>
   <div class="field">
-    <%= f.label "学部" %>
-    <%#= f.text_field :bachelor, autofocus: true %>学部
-    <%= f.select :bachelor,  [['法学部', '法学部'], ['商学部', '商学部'], ['政治経済学部', '政治経済学部'], ['文学部', '文学部'], ['理工学部', '理工学部'] , ['農学部', '農学部'] , ['経営学部', '経営学部'] , ['情報コミュニケーション学部', '情報コミュニケーション学部'] , ['国際日本学部', '国際日本学部'] , ['総合数理学部', '総合数理学部']  ] , {}, {class: "custom-select"} %>
-  </div>
-  <div class="field">
-    <%= f.label "学科" %>
     <%= f.text_field :major, autofocus: true %>学科
     
   </div>

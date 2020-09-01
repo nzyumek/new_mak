@@ -105,6 +105,11 @@
                          <%#= link_to "機材一覧", youtubes_path %>
                     </div>
                 </div>
+                <div class="row">
+                    <div class=" col-xs-6">
+                        <%= link_to "ログアウト", destroy_user_session_path, method: :delete , class:"check" %>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
