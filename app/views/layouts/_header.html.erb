@@ -47,7 +47,7 @@
                 <%  elsif user_signed_in?  %>
                     <li id="menu-item-444" class="menu-item mr-2">
                                 <% if current_user.confirmable? %>
-                                    承認待ち
+                                    <p>承認待ち</p>
                                 <% else %>
                                     <%= link_to "マイページ", user_path(:id), style: 'color:#333333;' ,class:"btn btn-outline-secondary" %>
                                 <% end %>

@@ -9,7 +9,9 @@
   
   <% if @inquiry.select == "仮入会希望" %>
     <%#= @user.line_id %>
-    shibuchou
+    <h2>※️仮入会はまだ完了し<span class="text-danger">ていません</span>※️</h2>
+    <p>画面のQRコードを読み取り、担当者のLINEを追加してください。</br>
+その後、担当者が仮入会者用のグループへと招待いたします！</p>
     <%= image_tag 'ayumi.jpg', class: "img-responsive center-block", :width => "260", :height => "auto" %>
   <% end %>
 </div>
