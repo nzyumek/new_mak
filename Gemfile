@@ -89,3 +89,5 @@ gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 
 gem 'ransack', github: 'activerecord-hackery/ransack'
+
+gem 'google-analytics-rails'

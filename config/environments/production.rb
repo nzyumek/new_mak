@@ -122,4 +122,7 @@ Rails.application.configure do
   
   # mailer setting
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  
+  #google
+  # GA.tracker = "UA-google-site-verification: googlec7d56477062182ff.html"
 end
