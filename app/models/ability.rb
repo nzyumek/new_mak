@@ -14,7 +14,7 @@ class Ability
         can :manage, :mak
         can :read, :about
        
-       if user.admin? or user.fuku_kan? or user.fuku_kan_gi? or user.fuku_kan_edi? or user.fuku_kan_sho? or user.fuku_kan_so? or user.fuku_kan_pra? or user.gijutsu_hp?
+       if user.admin? or user.fuku_kan? or user.fuku_kan_gi? or user.fuku_kan_edi? or user.fuku_kan_sho? or user.fuku_kan_so? or user.fuku_kan_pra? or user.gijutsu_hp? or user.kanjichou?
          can :manage, :all
        end
        
