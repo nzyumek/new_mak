@@ -16,12 +16,12 @@
             <%= user.h_lastn %><%= user.h_firstn %>
         </td>
         <td>
-            <% if current_user.admin? || current_user.fuku_kan? %>
+            <% if current_user.admin? || current_user.fuku_kan? ||  current_user.gijutsu_hp? %>
                 <%= user.studno %>
             <% end %>            
         </td>
         <td>
-            <%= user.bachelor %>学部
+            <%= user.bachelor %>
         </td>
         <td>
             <%= user.major %>学科

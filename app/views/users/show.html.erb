@@ -26,7 +26,7 @@
                 
                 <div class="row">
                     
-                    <h3><%= @user.bachelor %>学部</h3>
+                    <h3><%= @user.bachelor %></h3>
                     <h3><%= @user.major %>学科</h3>
                     <h3>        
             <% if @user.confirmable? %>
@@ -81,7 +81,7 @@
                副幹事長・練習部長
             <% elsif @user.admin? %>
                 管理員
-            <% end %><%= @user.role %></h3>
+            <% end %></h3>
                     
                     <div class="profile-edit">
                         <%= link_to 'プロフィールを編集する', edit_user_registration_path %>

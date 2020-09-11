@@ -33,7 +33,7 @@
                     <th scope="col">お名前<%#= sort_link(@q, :lastn, "お名前") %></th>
                     <th scope="col">ふりがな　</th>
                     <% if current_user.admin? || current_user.fuku_kan? || current_user.gijutsu_hp? %>
-                    <th scope="col">学籍番号</th>
+                      <th scope="col">学籍番号</th>
                     <% end %>
                     <th scope="col">学部<%#= sort_link(@q, :bachelor, "学部") %></th>
                     <th scope="col">学科</th>

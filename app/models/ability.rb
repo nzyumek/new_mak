@@ -30,7 +30,7 @@ class Ability
          #can :edit, [:member_list, :youtube, :news, :about, :home, :inquiry, :user, :registration]
        end
        
-       if user.member? or user.ob? #:makがモデルないため、コントローラーに設定しないといけませんが、理解できていません。
+       if user.member? or user.ob? or user.shougai_sup? or user.gijutsu_sup? #:makがモデルないため、コントローラーに設定しないといけませんが、理解できていません。
         can :manage, :registration
         can :read, [:youtube_post, :user]
        end
