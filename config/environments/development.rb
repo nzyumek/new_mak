@@ -67,8 +67,8 @@ Rails.application.configure do
    address:              'smtp.gmail.com',
    port:                  587,
    domain:               'gmail.com',
-   user_name:            'meijimaktest@gmail.com',
-   password:             'hfawhmqeupbcdbhp',
+   user_name:            'web.meiji.ak@gmail.com',
+   password:             'njdbwlwumeppnooa',
    authentication:       'plain',
    enable_starttls_auto:  true
   }
@@ -78,8 +78,8 @@ Rails.application.configure do
     :address => "smtp.gmail.com",
     :port => 587,
     :domain => 'smtp.gmail.com',
-    :user_name => "meijimaktest@gmail.com", #gmailアドレス
-    :password => "hfawhmqeupbcdbhp", #gmailパスワード
+    :user_name => "web.meiji.ak@gmail.com", #gmailアドレス
+    :password => "njdbwlwumeppnooa", #gmailパスワード
     :authentication => 'login',
   }
   
